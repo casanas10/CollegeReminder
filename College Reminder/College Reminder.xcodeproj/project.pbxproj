@@ -1,0 +1,426 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		71DBC7481BB5BA3C001B25ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DBC7471BB5BA3C001B25ED /* AppDelegate.swift */; };
+		71DBC74A1BB5BA3C001B25ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DBC7491BB5BA3C001B25ED /* ViewController.swift */; };
+		71DBC74D1BB5BA3C001B25ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71DBC74B1BB5BA3C001B25ED /* Main.storyboard */; };
+		71DBC74F1BB5BA3C001B25ED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71DBC74E1BB5BA3C001B25ED /* Images.xcassets */; };
+		71DBC7521BB5BA3C001B25ED /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71DBC7501BB5BA3C001B25ED /* LaunchScreen.xib */; };
+		71DBC75E1BB5BA3C001B25ED /* College_ReminderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DBC75D1BB5BA3C001B25ED /* College_ReminderTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		71DBC7581BB5BA3C001B25ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 71DBC73A1BB5BA3C001B25ED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 71DBC7411BB5BA3C001B25ED;
+			remoteInfo = "College Reminder";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		71DBC7421BB5BA3C001B25ED /* College Reminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "College Reminder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		71DBC7461BB5BA3C001B25ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71DBC7471BB5BA3C001B25ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		71DBC7491BB5BA3C001B25ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		71DBC74C1BB5BA3C001B25ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		71DBC74E1BB5BA3C001B25ED /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		71DBC7511BB5BA3C001B25ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		71DBC7571BB5BA3C001B25ED /* College ReminderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "College ReminderTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		71DBC75C1BB5BA3C001B25ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71DBC75D1BB5BA3C001B25ED /* College_ReminderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = College_ReminderTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		71DBC73F1BB5BA3C001B25ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71DBC7541BB5BA3C001B25ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		71DBC7391BB5BA3C001B25ED = {
+			isa = PBXGroup;
+			children = (
+				71DBC7441BB5BA3C001B25ED /* College Reminder */,
+				71DBC75A1BB5BA3C001B25ED /* College ReminderTests */,
+				71DBC7431BB5BA3C001B25ED /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		71DBC7431BB5BA3C001B25ED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				71DBC7421BB5BA3C001B25ED /* College Reminder.app */,
+				71DBC7571BB5BA3C001B25ED /* College ReminderTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		71DBC7441BB5BA3C001B25ED /* College Reminder */ = {
+			isa = PBXGroup;
+			children = (
+				71DBC7471BB5BA3C001B25ED /* AppDelegate.swift */,
+				71DBC7491BB5BA3C001B25ED /* ViewController.swift */,
+				71DBC74B1BB5BA3C001B25ED /* Main.storyboard */,
+				71DBC74E1BB5BA3C001B25ED /* Images.xcassets */,
+				71DBC7501BB5BA3C001B25ED /* LaunchScreen.xib */,
+				71DBC7451BB5BA3C001B25ED /* Supporting Files */,
+			);
+			path = "College Reminder";
+			sourceTree = "<group>";
+		};
+		71DBC7451BB5BA3C001B25ED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				71DBC7461BB5BA3C001B25ED /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		71DBC75A1BB5BA3C001B25ED /* College ReminderTests */ = {
+			isa = PBXGroup;
+			children = (
+				71DBC75D1BB5BA3C001B25ED /* College_ReminderTests.swift */,
+				71DBC75B1BB5BA3C001B25ED /* Supporting Files */,
+			);
+			path = "College ReminderTests";
+			sourceTree = "<group>";
+		};
+		71DBC75B1BB5BA3C001B25ED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				71DBC75C1BB5BA3C001B25ED /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		71DBC7411BB5BA3C001B25ED /* College Reminder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71DBC7611BB5BA3C001B25ED /* Build configuration list for PBXNativeTarget "College Reminder" */;
+			buildPhases = (
+				71DBC73E1BB5BA3C001B25ED /* Sources */,
+				71DBC73F1BB5BA3C001B25ED /* Frameworks */,
+				71DBC7401BB5BA3C001B25ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "College Reminder";
+			productName = "College Reminder";
+			productReference = 71DBC7421BB5BA3C001B25ED /* College Reminder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		71DBC7561BB5BA3C001B25ED /* College ReminderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71DBC7641BB5BA3C001B25ED /* Build configuration list for PBXNativeTarget "College ReminderTests" */;
+			buildPhases = (
+				71DBC7531BB5BA3C001B25ED /* Sources */,
+				71DBC7541BB5BA3C001B25ED /* Frameworks */,
+				71DBC7551BB5BA3C001B25ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				71DBC7591BB5BA3C001B25ED /* PBXTargetDependency */,
+			);
+			name = "College ReminderTests";
+			productName = "College ReminderTests";
+			productReference = 71DBC7571BB5BA3C001B25ED /* College ReminderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		71DBC73A1BB5BA3C001B25ED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "alejandro casanas";
+				TargetAttributes = {
+					71DBC7411BB5BA3C001B25ED = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					71DBC7561BB5BA3C001B25ED = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 71DBC7411BB5BA3C001B25ED;
+					};
+				};
+			};
+			buildConfigurationList = 71DBC73D1BB5BA3C001B25ED /* Build configuration list for PBXProject "College Reminder" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 71DBC7391BB5BA3C001B25ED;
+			productRefGroup = 71DBC7431BB5BA3C001B25ED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				71DBC7411BB5BA3C001B25ED /* College Reminder */,
+				71DBC7561BB5BA3C001B25ED /* College ReminderTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		71DBC7401BB5BA3C001B25ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71DBC74D1BB5BA3C001B25ED /* Main.storyboard in Resources */,
+				71DBC7521BB5BA3C001B25ED /* LaunchScreen.xib in Resources */,
+				71DBC74F1BB5BA3C001B25ED /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71DBC7551BB5BA3C001B25ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		71DBC73E1BB5BA3C001B25ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71DBC74A1BB5BA3C001B25ED /* ViewController.swift in Sources */,
+				71DBC7481BB5BA3C001B25ED /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		71DBC7531BB5BA3C001B25ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71DBC75E1BB5BA3C001B25ED /* College_ReminderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		71DBC7591BB5BA3C001B25ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 71DBC7411BB5BA3C001B25ED /* College Reminder */;
+			targetProxy = 71DBC7581BB5BA3C001B25ED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		71DBC74B1BB5BA3C001B25ED /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				71DBC74C1BB5BA3C001B25ED /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		71DBC7501BB5BA3C001B25ED /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				71DBC7511BB5BA3C001B25ED /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		71DBC75F1BB5BA3C001B25ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		71DBC7601BB5BA3C001B25ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		71DBC7621BB5BA3C001B25ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "College Reminder/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		71DBC7631BB5BA3C001B25ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "College Reminder/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		71DBC7651BB5BA3C001B25ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "College ReminderTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/College Reminder.app/College Reminder";
+			};
+			name = Debug;
+		};
+		71DBC7661BB5BA3C001B25ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "College ReminderTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/College Reminder.app/College Reminder";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		71DBC73D1BB5BA3C001B25ED /* Build configuration list for PBXProject "College Reminder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71DBC75F1BB5BA3C001B25ED /* Debug */,
+				71DBC7601BB5BA3C001B25ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		71DBC7611BB5BA3C001B25ED /* Build configuration list for PBXNativeTarget "College Reminder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71DBC7621BB5BA3C001B25ED /* Debug */,
+				71DBC7631BB5BA3C001B25ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		71DBC7641BB5BA3C001B25ED /* Build configuration list for PBXNativeTarget "College ReminderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71DBC7651BB5BA3C001B25ED /* Debug */,
+				71DBC7661BB5BA3C001B25ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 71DBC73A1BB5BA3C001B25ED /* Project object */;
+}
