@@ -10,6 +10,20 @@
 		4C2FE4971BDDA8A40050072A /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2FE4961BDDA8A40050072A /* SWRevealViewController.m */; };
 		4C2FE4991BDDB13F0050072A /* BackTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2FE4981BDDB13F0050072A /* BackTableViewController.swift */; };
 		4C7203951BDE6C5B00DE1700 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7203941BDE6C5B00DE1700 /* MapViewController.swift */; };
+		6A91E16B1BE14B4A00A7AFBE /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A91E16A1BE14B4A00A7AFBE /* SignUpVC.swift */; settings = {ASSET_TAGS = (); }; };
+		6A91E16E1BE14F7400A7AFBE /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A91E16C1BE14F7400A7AFBE /* Bolts.framework */; settings = {ASSET_TAGS = (); }; };
+		6A91E16F1BE14F7400A7AFBE /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A91E16D1BE14F7400A7AFBE /* Parse.framework */; settings = {ASSET_TAGS = (); }; };
+		6A91E1711BE14F9E00A7AFBE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A91E1701BE14F9E00A7AFBE /* AudioToolbox.framework */; };
+		6A91E1731BE14FAA00A7AFBE /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A91E1721BE14FAA00A7AFBE /* CFNetwork.framework */; };
+		6A91E1751BE14FAF00A7AFBE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A91E1741BE14FAF00A7AFBE /* CoreGraphics.framework */; };
+		6A91E1771BE14FB700A7AFBE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A91E1761BE14FB700A7AFBE /* CoreLocation.framework */; };
+		6A91E1791BE14FBD00A7AFBE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A91E1781BE14FBD00A7AFBE /* QuartzCore.framework */; };
+		6A91E17B1BE14FC500A7AFBE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A91E17A1BE14FC500A7AFBE /* Security.framework */; };
+		6A91E17D1BE14FD000A7AFBE /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A91E17C1BE14FD000A7AFBE /* StoreKit.framework */; };
+		6A91E17F1BE14FD800A7AFBE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A91E17E1BE14FD800A7AFBE /* SystemConfiguration.framework */; };
+		6A91E1811BE14FE100A7AFBE /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A91E1801BE14FE100A7AFBE /* libz.tbd */; };
+		6A91E1831BE14FEF00A7AFBE /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A91E1821BE14FEF00A7AFBE /* libsqlite3.tbd */; };
+		6A91E1851BE153D200A7AFBE /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A91E1841BE153D200A7AFBE /* SignInVC.swift */; settings = {ASSET_TAGS = (); }; };
 		71DBC7481BB5BA3C001B25ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DBC7471BB5BA3C001B25ED /* AppDelegate.swift */; };
 		71DBC74A1BB5BA3C001B25ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DBC7491BB5BA3C001B25ED /* ViewController.swift */; };
 		71DBC74D1BB5BA3C001B25ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71DBC74B1BB5BA3C001B25ED /* Main.storyboard */; };
@@ -34,6 +48,20 @@
 		4C2FE4961BDDA8A40050072A /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		4C2FE4981BDDB13F0050072A /* BackTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackTableViewController.swift; sourceTree = "<group>"; };
 		4C7203941BDE6C5B00DE1700 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		6A91E16A1BE14B4A00A7AFBE /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		6A91E16C1BE14F7400A7AFBE /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		6A91E16D1BE14F7400A7AFBE /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		6A91E1701BE14F9E00A7AFBE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		6A91E1721BE14FAA00A7AFBE /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		6A91E1741BE14FAF00A7AFBE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6A91E1761BE14FB700A7AFBE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		6A91E1781BE14FBD00A7AFBE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		6A91E17A1BE14FC500A7AFBE /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		6A91E17C1BE14FD000A7AFBE /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		6A91E17E1BE14FD800A7AFBE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		6A91E1801BE14FE100A7AFBE /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		6A91E1821BE14FEF00A7AFBE /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		6A91E1841BE153D200A7AFBE /* SignInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		71DBC7421BB5BA3C001B25ED /* College Reminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "College Reminder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		71DBC7461BB5BA3C001B25ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71DBC7471BB5BA3C001B25ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +79,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A91E1831BE14FEF00A7AFBE /* libsqlite3.tbd in Frameworks */,
+				6A91E1811BE14FE100A7AFBE /* libz.tbd in Frameworks */,
+				6A91E17F1BE14FD800A7AFBE /* SystemConfiguration.framework in Frameworks */,
+				6A91E17D1BE14FD000A7AFBE /* StoreKit.framework in Frameworks */,
+				6A91E17B1BE14FC500A7AFBE /* Security.framework in Frameworks */,
+				6A91E1791BE14FBD00A7AFBE /* QuartzCore.framework in Frameworks */,
+				6A91E1771BE14FB700A7AFBE /* CoreLocation.framework in Frameworks */,
+				6A91E1751BE14FAF00A7AFBE /* CoreGraphics.framework in Frameworks */,
+				6A91E1731BE14FAA00A7AFBE /* CFNetwork.framework in Frameworks */,
+				6A91E1711BE14F9E00A7AFBE /* AudioToolbox.framework in Frameworks */,
+				6A91E16F1BE14F7400A7AFBE /* Parse.framework in Frameworks */,
+				6A91E16E1BE14F7400A7AFBE /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +107,16 @@
 		71DBC7391BB5BA3C001B25ED = {
 			isa = PBXGroup;
 			children = (
+				6A91E1821BE14FEF00A7AFBE /* libsqlite3.tbd */,
+				6A91E1801BE14FE100A7AFBE /* libz.tbd */,
+				6A91E17E1BE14FD800A7AFBE /* SystemConfiguration.framework */,
+				6A91E17C1BE14FD000A7AFBE /* StoreKit.framework */,
+				6A91E17A1BE14FC500A7AFBE /* Security.framework */,
+				6A91E1781BE14FBD00A7AFBE /* QuartzCore.framework */,
+				6A91E1761BE14FB700A7AFBE /* CoreLocation.framework */,
+				6A91E1741BE14FAF00A7AFBE /* CoreGraphics.framework */,
+				6A91E1721BE14FAA00A7AFBE /* CFNetwork.framework */,
+				6A91E1701BE14F9E00A7AFBE /* AudioToolbox.framework */,
 				71DBC7441BB5BA3C001B25ED /* College Reminder */,
 				71DBC75A1BB5BA3C001B25ED /* College ReminderTests */,
 				71DBC7431BB5BA3C001B25ED /* Products */,
@@ -85,8 +135,12 @@
 		71DBC7441BB5BA3C001B25ED /* College Reminder */ = {
 			isa = PBXGroup;
 			children = (
+				6A91E16C1BE14F7400A7AFBE /* Bolts.framework */,
+				6A91E16D1BE14F7400A7AFBE /* Parse.framework */,
 				71DBC7471BB5BA3C001B25ED /* AppDelegate.swift */,
 				71DBC7491BB5BA3C001B25ED /* ViewController.swift */,
+				6A91E16A1BE14B4A00A7AFBE /* SignUpVC.swift */,
+				6A91E1841BE153D200A7AFBE /* SignInVC.swift */,
 				4C2FE4981BDDB13F0050072A /* BackTableViewController.swift */,
 				4C7203941BDE6C5B00DE1700 /* MapViewController.swift */,
 				71DBC74B1BB5BA3C001B25ED /* Main.storyboard */,
@@ -170,7 +224,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "alejandro casanas";
 				TargetAttributes = {
 					71DBC7411BB5BA3C001B25ED = {
@@ -230,6 +284,8 @@
 				71DBC74A1BB5BA3C001B25ED /* ViewController.swift in Sources */,
 				71DBC7481BB5BA3C001B25ED /* AppDelegate.swift in Sources */,
 				4C7203951BDE6C5B00DE1700 /* MapViewController.swift in Sources */,
+				6A91E1851BE153D200A7AFBE /* SignInVC.swift in Sources */,
+				6A91E16B1BE14B4A00A7AFBE /* SignUpVC.swift in Sources */,
 				4C2FE4971BDDA8A40050072A /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,6 +349,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -360,8 +417,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/College",
+					Reminder,
+				);
 				INFOPLIST_FILE = "College Reminder/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alejandrocasanas.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "College Reminder/College Reminder-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -373,8 +436,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/College",
+					Reminder,
+				);
 				INFOPLIST_FILE = "College Reminder/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alejandrocasanas.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "College Reminder/College Reminder-Bridging-Header.h";
 			};
@@ -394,6 +463,7 @@
 				);
 				INFOPLIST_FILE = "College ReminderTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alejandrocasanas.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/College Reminder.app/College Reminder";
 			};
@@ -409,6 +479,7 @@
 				);
 				INFOPLIST_FILE = "College ReminderTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alejandrocasanas.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/College Reminder.app/College Reminder";
 			};

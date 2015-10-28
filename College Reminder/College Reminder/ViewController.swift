@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class ViewController: UIViewController {
 
@@ -25,6 +26,9 @@ class ViewController: UIViewController {
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
         self.navigationController?.setNavigationBarHidden(false, animated: false)
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
