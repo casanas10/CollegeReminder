@@ -11,8 +11,6 @@
 		4C2FE4991BDDB13F0050072A /* BackTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2FE4981BDDB13F0050072A /* BackTableViewController.swift */; };
 		4C7203951BDE6C5B00DE1700 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7203941BDE6C5B00DE1700 /* MapViewController.swift */; };
 		6A91E16B1BE14B4A00A7AFBE /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A91E16A1BE14B4A00A7AFBE /* SignUpVC.swift */; settings = {ASSET_TAGS = (); }; };
-		6A91E16E1BE14F7400A7AFBE /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A91E16C1BE14F7400A7AFBE /* Bolts.framework */; settings = {ASSET_TAGS = (); }; };
-		6A91E16F1BE14F7400A7AFBE /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A91E16D1BE14F7400A7AFBE /* Parse.framework */; settings = {ASSET_TAGS = (); }; };
 		6A91E1711BE14F9E00A7AFBE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A91E1701BE14F9E00A7AFBE /* AudioToolbox.framework */; };
 		6A91E1731BE14FAA00A7AFBE /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A91E1721BE14FAA00A7AFBE /* CFNetwork.framework */; };
 		6A91E1751BE14FAF00A7AFBE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A91E1741BE14FAF00A7AFBE /* CoreGraphics.framework */; };
@@ -30,6 +28,8 @@
 		71DBC74F1BB5BA3C001B25ED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71DBC74E1BB5BA3C001B25ED /* Images.xcassets */; };
 		71DBC7521BB5BA3C001B25ED /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71DBC7501BB5BA3C001B25ED /* LaunchScreen.xib */; };
 		71DBC75E1BB5BA3C001B25ED /* College_ReminderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DBC75D1BB5BA3C001B25ED /* College_ReminderTests.swift */; };
+		71EFE7AB1BE17E1C0048F49A /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71EFE7A91BE17E1C0048F49A /* Bolts.framework */; settings = {ASSET_TAGS = (); }; };
+		71EFE7AC1BE17E1C0048F49A /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71EFE7AA1BE17E1C0048F49A /* Parse.framework */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,8 +49,6 @@
 		4C2FE4981BDDB13F0050072A /* BackTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackTableViewController.swift; sourceTree = "<group>"; };
 		4C7203941BDE6C5B00DE1700 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		6A91E16A1BE14B4A00A7AFBE /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
-		6A91E16C1BE14F7400A7AFBE /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
-		6A91E16D1BE14F7400A7AFBE /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		6A91E1701BE14F9E00A7AFBE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		6A91E1721BE14FAA00A7AFBE /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		6A91E1741BE14FAF00A7AFBE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -72,6 +70,8 @@
 		71DBC7571BB5BA3C001B25ED /* College ReminderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "College ReminderTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		71DBC75C1BB5BA3C001B25ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71DBC75D1BB5BA3C001B25ED /* College_ReminderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = College_ReminderTests.swift; sourceTree = "<group>"; };
+		71EFE7A91BE17E1C0048F49A /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		71EFE7AA1BE17E1C0048F49A /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,10 +87,10 @@
 				6A91E1791BE14FBD00A7AFBE /* QuartzCore.framework in Frameworks */,
 				6A91E1771BE14FB700A7AFBE /* CoreLocation.framework in Frameworks */,
 				6A91E1751BE14FAF00A7AFBE /* CoreGraphics.framework in Frameworks */,
+				71EFE7AB1BE17E1C0048F49A /* Bolts.framework in Frameworks */,
 				6A91E1731BE14FAA00A7AFBE /* CFNetwork.framework in Frameworks */,
+				71EFE7AC1BE17E1C0048F49A /* Parse.framework in Frameworks */,
 				6A91E1711BE14F9E00A7AFBE /* AudioToolbox.framework in Frameworks */,
-				6A91E16F1BE14F7400A7AFBE /* Parse.framework in Frameworks */,
-				6A91E16E1BE14F7400A7AFBE /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +109,8 @@
 			children = (
 				6A91E1821BE14FEF00A7AFBE /* libsqlite3.tbd */,
 				6A91E1801BE14FE100A7AFBE /* libz.tbd */,
+				71EFE7A91BE17E1C0048F49A /* Bolts.framework */,
+				71EFE7AA1BE17E1C0048F49A /* Parse.framework */,
 				6A91E17E1BE14FD800A7AFBE /* SystemConfiguration.framework */,
 				6A91E17C1BE14FD000A7AFBE /* StoreKit.framework */,
 				6A91E17A1BE14FC500A7AFBE /* Security.framework */,
@@ -135,8 +137,6 @@
 		71DBC7441BB5BA3C001B25ED /* College Reminder */ = {
 			isa = PBXGroup;
 			children = (
-				6A91E16C1BE14F7400A7AFBE /* Bolts.framework */,
-				6A91E16D1BE14F7400A7AFBE /* Parse.framework */,
 				71DBC7471BB5BA3C001B25ED /* AppDelegate.swift */,
 				71DBC7491BB5BA3C001B25ED /* ViewController.swift */,
 				6A91E16A1BE14B4A00A7AFBE /* SignUpVC.swift */,
@@ -421,6 +421,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/College",
 					Reminder,
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "College Reminder/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -440,6 +441,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/College",
 					Reminder,
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "College Reminder/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
