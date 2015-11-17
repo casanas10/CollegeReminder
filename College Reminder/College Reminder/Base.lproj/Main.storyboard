@@ -265,10 +265,10 @@
             </objects>
             <point key="canvasLocation" x="902" y="364"/>
         </scene>
-        <!--View Controller-->
+        <!--TimerVC-->
         <scene sceneID="Vk8-3z-2o1">
             <objects>
-                <viewController id="klf-JC-hCV" sceneMemberID="viewController">
+                <viewController id="klf-JC-hCV" customClass="TimerVC" customModule="College_Reminder" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Yb0-Y3-g3Y"/>
                         <viewControllerLayoutGuide type="bottom" id="GUW-f7-Z05"/>
@@ -295,10 +295,13 @@
                             <constraint firstItem="nV5-x7-J05" firstAttribute="leading" secondItem="4pp-ma-pEU" secondAttribute="leading" id="dKh-Ad-Ixp"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="sideViewDisplay" destination="b2A-pq-D6w" id="th0-lF-SQI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lIO-Za-m3b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1225" y="-1100"/>
+            <point key="canvasLocation" x="1342" y="-1146"/>
         </scene>
         <!--Back Table View Controller-->
         <scene sceneID="Yte-Cp-YWg">
