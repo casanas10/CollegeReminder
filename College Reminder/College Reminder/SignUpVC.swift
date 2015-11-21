@@ -103,7 +103,7 @@ class SignUpVC: UIViewController {
                         }
                         
                         
-                            let uiAlert = UIAlertController(title: "Error", message: "Could not sign, try another email/username", preferredStyle: UIAlertControllerStyle.Alert)
+                            let uiAlert = UIAlertController(title: "Error", message: "Could not sign up, try another email/username", preferredStyle: UIAlertControllerStyle.Alert)
                             self.presentViewController(uiAlert, animated: true, completion: nil)
                             
                             
