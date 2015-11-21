@@ -38,12 +38,14 @@ class ToDoVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         //query users, task, and date
         let query = PFQuery(className: "ToDoTask")
+        query.whereKey("username", equalTo: PFUser.currentUser()!.username!)
         
         do
         {
             let userArray = try query.findObjects()
             
             users = userArray
+            print(users)
             
         }
         catch

@@ -282,22 +282,68 @@
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <animations/>
                                 <items>
-                                    <navigationItem id="yWw-Zx-pCQ">
+                                    <navigationItem title="Timer/Stopwatch" id="yWw-Zx-pCQ">
                                         <barButtonItem key="leftBarButtonItem" title="⌸" id="b2A-pq-D6w"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <label autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="70" translatesAutoresizingMaskIntoConstraints="NO" id="LyP-UA-jtA">
+                                <rect key="frame" x="0.0" y="64" width="600" height="152"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="152" id="7ml-0t-myc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="72"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tqc-pM-qDt">
+                                <rect key="frame" x="430" y="256" width="50" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Eck-RE-Shy"/>
+                                    <constraint firstAttribute="width" constant="50" id="zhl-z4-fL3"/>
+                                </constraints>
+                                <state key="normal" title="Restart"/>
+                                <connections>
+                                    <action selector="restartButton:" destination="klf-JC-hCV" eventType="touchUpInside" id="dLs-8c-Rid"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d10-9x-Xa5">
+                                <rect key="frame" x="120" y="256" width="46" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="0Js-d9-iSg"/>
+                                    <constraint firstAttribute="height" constant="30" id="E5z-Gg-BJ2"/>
+                                </constraints>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startButton:" destination="klf-JC-hCV" eventType="touchUpInside" id="GTh-IR-J6B"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="nV5-x7-J05" firstAttribute="top" secondItem="Yb0-Y3-g3Y" secondAttribute="bottom" id="49D-cz-abc"/>
+                            <constraint firstItem="LyP-UA-jtA" firstAttribute="top" secondItem="nV5-x7-J05" secondAttribute="bottom" id="CoW-Fw-9gX"/>
+                            <constraint firstItem="LyP-UA-jtA" firstAttribute="trailing" secondItem="nV5-x7-J05" secondAttribute="trailing" id="DDj-yQ-kBM"/>
+                            <constraint firstItem="LyP-UA-jtA" firstAttribute="leading" secondItem="nV5-x7-J05" secondAttribute="leading" id="Gkd-BQ-32v"/>
+                            <constraint firstItem="tqc-pM-qDt" firstAttribute="baseline" secondItem="d10-9x-Xa5" secondAttribute="baseline" id="HOx-5d-bBm"/>
+                            <constraint firstItem="d10-9x-Xa5" firstAttribute="leading" secondItem="4pp-ma-pEU" secondAttribute="leadingMargin" constant="100" id="V1w-IF-K4l"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nV5-x7-J05" secondAttribute="trailing" constant="-20" id="cbJ-zh-aZ8"/>
+                            <constraint firstItem="nV5-x7-J05" firstAttribute="leading" secondItem="4pp-ma-pEU" secondAttribute="leadingMargin" constant="-20" id="d2X-qk-4es"/>
                             <constraint firstAttribute="trailing" secondItem="nV5-x7-J05" secondAttribute="trailing" id="d74-yy-6Td"/>
                             <constraint firstItem="nV5-x7-J05" firstAttribute="leading" secondItem="4pp-ma-pEU" secondAttribute="leading" id="dKh-Ad-Ixp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tqc-pM-qDt" secondAttribute="trailing" constant="100" id="gWn-hT-vk2"/>
+                            <constraint firstItem="tqc-pM-qDt" firstAttribute="top" secondItem="LyP-UA-jtA" secondAttribute="bottom" constant="40" id="p3y-3t-vBm"/>
+                            <constraint firstItem="nV5-x7-J05" firstAttribute="top" secondItem="Yb0-Y3-g3Y" secondAttribute="bottom" id="wdt-vs-ZXf"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="sideViewDisplay" destination="b2A-pq-D6w" id="th0-lF-SQI"/>
+                        <outlet property="startStopButton" destination="d10-9x-Xa5" id="igv-2t-kPq"/>
+                        <outlet property="timeLabel" destination="LyP-UA-jtA" id="czS-OA-ca6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lIO-Za-m3b" userLabel="First Responder" sceneMemberID="firstResponder"/>
