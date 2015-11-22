@@ -47,6 +47,9 @@
 		71DBC75E1BB5BA3C001B25ED /* College_ReminderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DBC75D1BB5BA3C001B25ED /* College_ReminderTests.swift */; };
 		71EFE7AB1BE17E1C0048F49A /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71EFE7A91BE17E1C0048F49A /* Bolts.framework */; };
 		71EFE7AC1BE17E1C0048F49A /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71EFE7AA1BE17E1C0048F49A /* Parse.framework */; };
+		E41322D31C027B2C001BA6B5 /* NotesMasterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41322D21C027B2C001BA6B5 /* NotesMasterTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		E41322D51C027B57001BA6B5 /* NotesMasterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41322D41C027B57001BA6B5 /* NotesMasterTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		E41322D71C027B8C001BA6B5 /* AddNoteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41322D61C027B8C001BA6B5 /* AddNoteTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +122,9 @@
 		71DBC75D1BB5BA3C001B25ED /* College_ReminderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = College_ReminderTests.swift; sourceTree = "<group>"; };
 		71EFE7A91BE17E1C0048F49A /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		71EFE7AA1BE17E1C0048F49A /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		E41322D21C027B2C001BA6B5 /* NotesMasterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesMasterTableViewController.swift; sourceTree = "<group>"; };
+		E41322D41C027B57001BA6B5 /* NotesMasterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesMasterTableViewCell.swift; sourceTree = "<group>"; };
+		E41322D61C027B8C001BA6B5 /* AddNoteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNoteTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,8 +227,11 @@
 				71DBC7471BB5BA3C001B25ED /* AppDelegate.swift */,
 				71DBC7491BB5BA3C001B25ED /* ViewController.swift */,
 				6A91E16A1BE14B4A00A7AFBE /* SignUpVC.swift */,
+				E41322D21C027B2C001BA6B5 /* NotesMasterTableViewController.swift */,
+				E41322D41C027B57001BA6B5 /* NotesMasterTableViewCell.swift */,
 				713869F11BFBD219005A027A /* TimerVC.swift */,
 				6A91E1841BE153D200A7AFBE /* SignInVC.swift */,
+				E41322D61C027B8C001BA6B5 /* AddNoteTableViewController.swift */,
 				713869F31BFBD540005A027A /* ToDoVC.swift */,
 				717CF3FD1C00ED39000ABEB0 /* addToDoItemVC.swift */,
 				4C2FE4981BDDB13F0050072A /* BackTableViewController.swift */,
@@ -378,11 +387,14 @@
 				4C4990651C013DC1003A68CD /* FSCalendarAppearance.m in Sources */,
 				4C7203951BDE6C5B00DE1700 /* MapViewController.swift in Sources */,
 				4C4990691C013DC1003A68CD /* FSCalendarFlowLayout.m in Sources */,
+				E41322D31C027B2C001BA6B5 /* NotesMasterTableViewController.swift in Sources */,
 				4C4990671C013DC1003A68CD /* FSCalendarCollectionView.m in Sources */,
 				4C49906F1C013DC1003A68CD /* UIView+FSExtension.m in Sources */,
 				717CF3FE1C00ED39000ABEB0 /* addToDoItemVC.swift in Sources */,
 				4C4990661C013DC1003A68CD /* FSCalendarCell.m in Sources */,
+				E41322D71C027B8C001BA6B5 /* AddNoteTableViewController.swift in Sources */,
 				713869F41BFBD540005A027A /* ToDoVC.swift in Sources */,
+				E41322D51C027B57001BA6B5 /* NotesMasterTableViewCell.swift in Sources */,
 				4C49906B1C013DC1003A68CD /* FSCalendarStickyHeader.m in Sources */,
 				6A91E1851BE153D200A7AFBE /* SignInVC.swift in Sources */,
 				4C49906E1C013DC1003A68CD /* NSString+FSExtension.m in Sources */,
