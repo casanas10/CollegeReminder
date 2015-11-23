@@ -9,10 +9,11 @@
 import UIKit
 import Parse
 import Bolts
+import Social
 
 class NotesMasterTableViewController: UITableViewController {
     
-    
+    var textToShare = ""
     var noteObjects : NSMutableArray!  = NSMutableArray()
     
     override func viewDidLoad() {
@@ -135,7 +136,27 @@ class NotesMasterTableViewController: UITableViewController {
         
         cell.masterTitleLabel?.text = object["title"] as? String
         cell.masterTextLabel?.text = object["text"] as? String
+        
         return cell
+    }
+    
+    override func tableView(tableView: UITableView?, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(tableView: UITableView?, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if (editingStyle == UITableViewCellEditingStyle.Delete) {
+            
+            var object:PFObject = self.noteObjects.objectAtIndex(indexPath.row) as! PFObject
+            
+            object.deleteInBackgroundWithBlock({ (success, error) -> Void in
+                
+                self.fetchAllObjects()
+                
+                self.noteObjects.removeObjectAtIndex(indexPath.row)
+            })
+        }
     }
     
     
@@ -152,6 +173,8 @@ class NotesMasterTableViewController: UITableViewController {
             self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
         }
     }
+    
+    
     
     
     /*

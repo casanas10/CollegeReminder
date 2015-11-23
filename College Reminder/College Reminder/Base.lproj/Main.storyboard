@@ -264,7 +264,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fnC-MW-QPY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="902" y="364"/>
+            <point key="canvasLocation" x="771" y="478"/>
         </scene>
         <!--Data Source-->
         <scene sceneID="YCm-43-nGK">
@@ -530,8 +530,8 @@
                                             </attributedString>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7uh-SA-aQC">
-                                            <rect key="frame" x="8" y="37" width="584" height="96"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7uh-SA-aQC">
+                                            <rect key="frame" x="8" y="37" width="584" height="112"/>
                                             <attributedString key="attributedText">
                                                 <fragment content="Label">
                                                     <attributes>
@@ -551,12 +551,13 @@
                                         <constraint firstItem="rAl-2b-HSL" firstAttribute="leading" secondItem="7uh-SA-aQC" secondAttribute="leading" id="ZPE-HE-xGz"/>
                                         <constraint firstItem="rAl-2b-HSL" firstAttribute="top" secondItem="Ayz-DQ-uVM" secondAttribute="topMargin" id="eVL-U4-Igr"/>
                                         <constraint firstItem="7uh-SA-aQC" firstAttribute="trailing" secondItem="rAl-2b-HSL" secondAttribute="trailing" id="ig8-GS-Pmv"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="7uh-SA-aQC" secondAttribute="bottom" constant="8" id="vfR-cO-tmI"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="7uh-SA-aQC" secondAttribute="bottom" constant="29" id="vfR-cO-tmI"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="masterTextLabel" destination="7uh-SA-aQC" id="a4d-OI-z5a"/>
                                     <outlet property="masterTitleLabel" destination="rAl-2b-HSL" id="PR8-G3-CqE"/>
+                                    <segue destination="o4D-36-d1v" kind="show" identifier="editNote" id="YTo-c7-yoq"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -572,13 +573,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <segue destination="o4D-36-d1v" kind="show" identifier="editNote" id="Ccq-IS-QgJ"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kVv-9B-SOw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1852" y="1561"/>
+            <point key="canvasLocation" x="2020" y="1620"/>
         </scene>
         <!--Add Note-->
         <scene sceneID="CT3-pQ-hIY">
@@ -620,16 +618,26 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="Enter text here..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jER-d8-iCy">
-                                                    <rect key="frame" x="8" y="8" width="584" height="133"/>
+                                                    <rect key="frame" x="8" y="8" width="584" height="102"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Lx-OB-RUx">
+                                                    <rect key="frame" x="8" y="112" width="584" height="30"/>
+                                                    <state key="normal" title="Share on Facebook"/>
+                                                    <connections>
+                                                        <action selector="shareToFacebook:" destination="o4D-36-d1v" eventType="touchUpInside" id="pHS-Kd-kzh"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="jER-d8-iCy" firstAttribute="bottom" secondItem="yLb-ij-78R" secondAttribute="bottomMargin" id="HFn-ip-PKQ"/>
+                                                <constraint firstItem="7Lx-OB-RUx" firstAttribute="bottom" secondItem="yLb-ij-78R" secondAttribute="bottomMargin" id="NSC-GL-shW"/>
                                                 <constraint firstItem="jER-d8-iCy" firstAttribute="leading" secondItem="yLb-ij-78R" secondAttribute="leadingMargin" id="TpF-sD-wZS"/>
                                                 <constraint firstItem="jER-d8-iCy" firstAttribute="trailing" secondItem="yLb-ij-78R" secondAttribute="trailingMargin" id="aac-Yx-FrX"/>
+                                                <constraint firstItem="7Lx-OB-RUx" firstAttribute="trailing" secondItem="jER-d8-iCy" secondAttribute="trailing" id="ftk-CQ-PXL"/>
                                                 <constraint firstItem="jER-d8-iCy" firstAttribute="top" secondItem="yLb-ij-78R" secondAttribute="topMargin" id="giS-CO-iaM"/>
+                                                <constraint firstItem="7Lx-OB-RUx" firstAttribute="leading" secondItem="jER-d8-iCy" secondAttribute="leading" id="ziE-k1-xHc"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -952,9 +960,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="05r-2o-Br6"/>
         <segue reference="ndA-bd-4lj"/>
+        <segue reference="05r-2o-Br6"/>
         <segue reference="llD-3L-BFc"/>
-        <segue reference="Ccq-IS-QgJ"/>
+        <segue reference="YTo-c7-yoq"/>
     </inferredMetricsTieBreakers>
 </document>

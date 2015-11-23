@@ -50,6 +50,7 @@
 		E41322D31C027B2C001BA6B5 /* NotesMasterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41322D21C027B2C001BA6B5 /* NotesMasterTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		E41322D51C027B57001BA6B5 /* NotesMasterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41322D41C027B57001BA6B5 /* NotesMasterTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		E41322D71C027B8C001BA6B5 /* AddNoteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41322D61C027B8C001BA6B5 /* AddNoteTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		E4689A921C02931100183BA8 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4689A911C02931100183BA8 /* Social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +126,7 @@
 		E41322D21C027B2C001BA6B5 /* NotesMasterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesMasterTableViewController.swift; sourceTree = "<group>"; };
 		E41322D41C027B57001BA6B5 /* NotesMasterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesMasterTableViewCell.swift; sourceTree = "<group>"; };
 		E41322D61C027B8C001BA6B5 /* AddNoteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNoteTableViewController.swift; sourceTree = "<group>"; };
+		E4689A911C02931100183BA8 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4689A921C02931100183BA8 /* Social.framework in Frameworks */,
 				6A91E1831BE14FEF00A7AFBE /* libsqlite3.tbd in Frameworks */,
 				6A91E1811BE14FE100A7AFBE /* libz.tbd in Frameworks */,
 				6A91E17F1BE14FD800A7AFBE /* SystemConfiguration.framework in Frameworks */,
@@ -194,6 +197,7 @@
 		71DBC7391BB5BA3C001B25ED = {
 			isa = PBXGroup;
 			children = (
+				E4689A911C02931100183BA8 /* Social.framework */,
 				6A91E1821BE14FEF00A7AFBE /* libsqlite3.tbd */,
 				6A91E1801BE14FE100A7AFBE /* libz.tbd */,
 				71EFE7A91BE17E1C0048F49A /* Bolts.framework */,

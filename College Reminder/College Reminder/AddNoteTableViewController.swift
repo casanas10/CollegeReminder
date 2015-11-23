@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 import Bolts
-
+import Social
 
 class AddNoteTableViewController: UITableViewController {
     
@@ -50,7 +50,7 @@ class AddNoteTableViewController: UITableViewController {
         self.object["username"] = PFUser.currentUser()?.username
         self.object["title"] = self.titleField?.text
         self.object["text"] = self.textView?.text
-        
+       
         self.object.saveEventually(){ (success,error) -> Void in
             
             if(error == nil){
@@ -61,6 +61,15 @@ class AddNoteTableViewController: UITableViewController {
         }
         self.navigationController?.popToRootViewControllerAnimated(true)
     }
+    
+    @IBAction func shareToFacebook(sender: UIButton) {
+        var shareToFacebook: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+        self.presentViewController(shareToFacebook, animated: true, completion: nil)
+        shareToFacebook.setInitialText(self.textView?.text)
+        
+    }
+    
+    
     
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
