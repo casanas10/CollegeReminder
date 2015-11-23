@@ -51,6 +51,8 @@
 		E41322D51C027B57001BA6B5 /* NotesMasterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41322D41C027B57001BA6B5 /* NotesMasterTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		E41322D71C027B8C001BA6B5 /* AddNoteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41322D61C027B8C001BA6B5 /* AddNoteTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		E4689A921C02931100183BA8 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4689A911C02931100183BA8 /* Social.framework */; };
+		E4689A941C02A23700183BA8 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4689A931C02A23700183BA8 /* ImageIO.framework */; };
+		E4689A961C02A25600183BA8 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4689A951C02A25600183BA8 /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +129,8 @@
 		E41322D41C027B57001BA6B5 /* NotesMasterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesMasterTableViewCell.swift; sourceTree = "<group>"; };
 		E41322D61C027B8C001BA6B5 /* AddNoteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNoteTableViewController.swift; sourceTree = "<group>"; };
 		E4689A911C02931100183BA8 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		E4689A931C02A23700183BA8 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		E4689A951C02A25600183BA8 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +138,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4689A961C02A25600183BA8 /* MessageUI.framework in Frameworks */,
+				E4689A941C02A23700183BA8 /* ImageIO.framework in Frameworks */,
 				E4689A921C02931100183BA8 /* Social.framework in Frameworks */,
 				6A91E1831BE14FEF00A7AFBE /* libsqlite3.tbd in Frameworks */,
 				6A91E1811BE14FE100A7AFBE /* libz.tbd in Frameworks */,
@@ -197,6 +203,8 @@
 		71DBC7391BB5BA3C001B25ED = {
 			isa = PBXGroup;
 			children = (
+				E4689A951C02A25600183BA8 /* MessageUI.framework */,
+				E4689A931C02A23700183BA8 /* ImageIO.framework */,
 				E4689A911C02931100183BA8 /* Social.framework */,
 				6A91E1821BE14FEF00A7AFBE /* libsqlite3.tbd */,
 				6A91E1801BE14FE100A7AFBE /* libz.tbd */,

@@ -10,7 +10,10 @@ import UIKit
 import Parse
 import Bolts
 import Social
-
+import Foundation
+public extension String {
+    var NS: NSString { return (self as NSString) }
+}
 class AddNoteTableViewController: UITableViewController {
     
     //@IBOutlet weak var titleField: UITextField!
@@ -20,8 +23,10 @@ class AddNoteTableViewController: UITableViewController {
     @IBOutlet weak var titleField: UITextField!
     @IBOutlet weak var textView: UITextView!
     
+    var pageSize = CGSize()
     
     var object: PFObject!
+   // var CGSIZE pageSize;
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,10 +44,19 @@ class AddNoteTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+ /*   func stringByAppendingPathComponent(path: String) -> String {
+        
+        let nsSt = self as NSString
+        
+        return nsSt.stringByAppendingPathComponent(path)
+    }*/
     
     // MARK: - Table view data source
     
@@ -63,13 +77,74 @@ class AddNoteTableViewController: UITableViewController {
     }
     
     @IBAction func shareToFacebook(sender: UIButton) {
+        /*pageSize = CGSizeMake(850, 1000)
+        
+        var fileToUpload = PFObject(className: "Notes")
+
+        var path = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
+        var documentDirectory = path[0]
+        var pdfPath = documentDirectory.NS.stringByAppendingPathComponent((self.titleField?.text)! + ".pdf")
+        generatePDF(pdfPath)
+        var PDFUrl = NSURL(string: pdfPath)            //convert pdfPath string to NSURL
+       // var myData = NSData(contentsOfURL: PDFUrl!)
+        
+        //var parseFile = PFFile(name: "image.png", data: myData!)
+       // fileToUpload["pdffile"] = parseFile
+*/
+        
         var shareToFacebook: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
         self.presentViewController(shareToFacebook, animated: true, completion: nil)
         shareToFacebook.setInitialText(self.textView?.text)
+        //shareToFacebook.addURL(PDFUrl)
+        
+    }
+  /*
+    func generatePDF(filePath: NSString)
+    {
+        UIGraphicsBeginPDFContextToFile(filePath as String, CGRectZero, nil)
+        UIGraphicsBeginPDFPageWithInfo(CGRectMake(0, 0, 850, 1100), nil)
+        drawBack()
+        drawText()
+        UIGraphicsEndPDFContext()
         
     }
     
+    func drawBack(){
+        var context = UIGraphicsGetCurrentContext()
+        var rect = CGRectMake(0, 0, pageSize.width, pageSize.height)
+        CGContextSetFillColorWithColor(context, UIColor.whiteColor().CGColor)
+        CGContextFillRect(context, rect)
+    }
     
+    func drawText(){
+        var context = UIGraphicsGetCurrentContext()
+        var font = UIFont(name: "Helvetica", size: 14)
+        CGContextSetFillColorWithColor(context, UIColor.blackColor().CGColor)
+        var textRect = CGRectMake(0, 0, textView.frame.size.width, textView.frame.size.height)
+        var myString = NSString()
+        myString = self.textView.text
+       // let textFontAttributes = [
+         //   NSFontAttributeName: font,
+           // lineBreakMode: NSLineBreakMode.ByTruncatingMiddle,
+            //alignment: NSTextAlignment.Lef
+        //
+        var paragraphstyle = NSMutableParagraphStyle()
+        paragraphstyle.lineBreakMode = NSLineBreakMode.ByTruncatingMiddle
+        paragraphstyle.alignment = NSTextAlignment.Left
+        if let actualFont = font {
+        let textFontAttributes = [
+            NSFontAttributeName: actualFont,
+            NSParagraphStyleAttributeName: paragraphstyle
+        ]
+       // var attributes: [NSObject : AnyObject] = [ NSFontAttributeName: font, NSParagraphStyle: paragraphstyle]
+        
+       // myString.drawInRect(textRect, withAttributes: ["withFont": font, "lineBreakMode": NSLineBreakMode.ByWordWrapping, "alignment": NSTextAlignment])
+        myString.drawInRect(textRect, withAttributes: textFontAttributes)
+        }
+        
+    }
+    
+    */
     
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

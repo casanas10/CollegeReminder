@@ -557,7 +557,7 @@
                                 <connections>
                                     <outlet property="masterTextLabel" destination="7uh-SA-aQC" id="a4d-OI-z5a"/>
                                     <outlet property="masterTitleLabel" destination="rAl-2b-HSL" id="PR8-G3-CqE"/>
-                                    <segue destination="o4D-36-d1v" kind="show" identifier="editNote" id="YTo-c7-yoq"/>
+                                    <segue destination="o4D-36-d1v" kind="show" identifier="editNote" id="tcG-Mj-tUW"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -569,14 +569,14 @@
                     <navigationItem key="navigationItem" title="Notes" id="oXD-x8-vpD">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="V4g-Ju-AqU">
                             <connections>
-                                <segue destination="o4D-36-d1v" kind="show" identifier="addNote" id="hKN-gf-5np"/>
+                                <segue destination="o4D-36-d1v" kind="show" identifier="addNote" id="axd-yq-8Bw"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kVv-9B-SOw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2020" y="1620"/>
+            <point key="canvasLocation" x="2509" y="1561"/>
         </scene>
         <!--Add Note-->
         <scene sceneID="CT3-pQ-hIY">
@@ -663,7 +663,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eWJ-Qj-kJF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2718" y="1577"/>
+            <point key="canvasLocation" x="3281" y="1561"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="12v-rw-yeV">
@@ -960,9 +960,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ndA-bd-4lj"/>
         <segue reference="05r-2o-Br6"/>
         <segue reference="llD-3L-BFc"/>
-        <segue reference="YTo-c7-yoq"/>
+        <segue reference="ndA-bd-4lj"/>
+        <segue reference="tcG-Mj-tUW"/>
     </inferredMetricsTieBreakers>
 </document>
