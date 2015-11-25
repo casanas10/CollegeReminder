@@ -11,6 +11,7 @@ import Parse
 import Bolts
 import Social
 import Foundation
+
 public extension String {
     var NS: NSString { return (self as NSString) }
 }

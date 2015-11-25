@@ -17,8 +17,10 @@ class addToDoItemVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var taskField: UITextField!
     
-    @IBOutlet weak var date: UITextField!
+
+    @IBOutlet weak var dateLabel: UILabel!
     
+    @IBOutlet weak var datePicker: UIDatePicker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,13 +32,30 @@ class addToDoItemVC: UIViewController, UITextFieldDelegate {
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
         self.navigationController?.setNavigationBarHidden(false, animated: false)
+        
+        dateLabel.text = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: NSDateFormatterStyle.ShortStyle, timeStyle: NSDateFormatterStyle.ShortStyle)
+        
+        datePicker.addTarget(self, action: Selector("dateChanged:"), forControlEvents: UIControlEvents.ValueChanged)
 
+        
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    
+    func dateChanged(datePicker:UIDatePicker) {
+        
+        
+        let formatDate = NSDateFormatter()
+        formatDate.dateStyle = NSDateFormatterStyle.ShortStyle
+        formatDate.timeStyle = NSDateFormatterStyle.ShortStyle
+        
+        let date_to_string = formatDate.stringFromDate(datePicker.date)
+        dateLabel.text = date_to_string
     }
     
     @IBAction func addTaskButton(sender: AnyObject) {
@@ -52,13 +71,18 @@ class addToDoItemVC: UIViewController, UITextFieldDelegate {
             }))
             
         } else {
-           
+            
+            if (dateLabel.text == ""){
+                
+                dateLabel.text = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: NSDateFormatterStyle.ShortStyle, timeStyle: NSDateFormatterStyle.ShortStyle)
+            }
+            
             //add the task to parse
             let task = PFObject(className: "ToDoTask")
             
             task["username"] = PFUser.currentUser()?.username
             task["taskField"] = taskField!.text
-            task["date"] = date!.text
+            task["date"] = dateLabel!.text
             
             
             task.saveInBackgroundWithBlock {
@@ -83,7 +107,7 @@ class addToDoItemVC: UIViewController, UITextFieldDelegate {
                             print("Task added")
                             
                             self.taskField.text = ""
-                            self.date.text = ""
+                            //self.dateLabel.text = ""
 
                             
                         }
@@ -109,11 +133,6 @@ class addToDoItemVC: UIViewController, UITextFieldDelegate {
         }
         
         
-        dateArr.append(date.text!)
-        todoItem.append(taskField.text!)
-        
-        NSUserDefaults.standardUserDefaults().setObject(dateArr, forKey: "ToDoDate")
-        NSUserDefaults.standardUserDefaults().setObject(todoItem, forKey: "ToDoItem")
     
     }
     
@@ -122,7 +141,8 @@ class addToDoItemVC: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         
         taskField.resignFirstResponder()
-        date.resignFirstResponder()
+        dateLabel.resignFirstResponder()
+        datePicker.resignFirstResponder()
         return true
     }
     

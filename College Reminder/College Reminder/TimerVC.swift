@@ -11,7 +11,8 @@ import UIKit
 
 class TimerVC: UIViewController {
 
-    @IBOutlet weak var sideViewDisplay: UIBarButtonItem!
+ 
+    @IBOutlet weak var sideViewDisplay: UIButton!
     
     @IBOutlet weak var timeLabel: UILabel!
     
@@ -30,8 +31,9 @@ class TimerVC: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        sideViewDisplay.target = self.revealViewController()
-        sideViewDisplay.action = Selector("revealToggle:")
+        
+        
+        sideViewDisplay.addTarget(self.revealViewController(), action: Selector("revealToggle:"), forControlEvents: UIControlEvents.TouchUpInside)
         
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
@@ -53,14 +55,14 @@ class TimerVC: UIViewController {
             
             timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: Selector("updateTimer"), userInfo: nil, repeats: true)
         
-            startStopButton.setTitle("Stop", forState: .Normal)
+            startStopButton.setImage(UIImage(named: "stop.png"), forState: UIControlState.Normal)
             
             startCount = false
             
         } else {
             
             timer.invalidate()
-            startStopButton.setTitle("Start", forState: .Normal)
+            startStopButton.setImage(UIImage(named: "play_button.png"), forState: UIControlState.Normal)
             startCount = true
             
         }

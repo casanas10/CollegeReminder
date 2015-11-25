@@ -9,15 +9,17 @@
 import UIKit
 import Parse
 
-var dateArr = [String]()
-var todoItem = [String]()
+
 
 class ToDoVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     
     var users = [PFObject]()
     
-    @IBOutlet weak var sideViewDisplay: UIBarButtonItem!
+    //var textArray = NSMutableArray()
+    
+
+    @IBOutlet weak var sideViewDisplay: UIButton!
     
     @IBOutlet weak var Table: UITableView!
     
@@ -27,8 +29,8 @@ class ToDoVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         // Do any additional setup after loading the view.
         
         
-        sideViewDisplay.target = self.revealViewController()
-        sideViewDisplay.action = Selector("revealToggle:")
+        
+        sideViewDisplay.addTarget(self.revealViewController(), action: Selector("revealToggle:"), forControlEvents: UIControlEvents.TouchUpInside)
       
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
@@ -53,6 +55,9 @@ class ToDoVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             print("There is an error")
         }
     
+        
+        self.Table.rowHeight = UITableViewAutomaticDimension
+        self.Table.estimatedRowHeight = 44.0
 
     }
 
