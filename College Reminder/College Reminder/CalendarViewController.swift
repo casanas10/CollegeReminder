@@ -13,20 +13,19 @@ class CalendarViewController: UIViewController , FSCalendarDataSource, FSCalenda
     
     @IBOutlet weak var calendar: FSCalendar!
     @IBOutlet weak var calendarHeightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var sideViewDisplay: UIBarButtonItem!
+   
+    @IBOutlet weak var sideViewDisplay: UIButton!
     let datesWithCat = ["20150505","20150605","20150705","20150805","20150905","20151005","20151105","20151205","20160106",
         "20160206","20160306","20160406","20160506","20160606","20160706"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        sideViewDisplay.target = self.revealViewController()
-        sideViewDisplay.action = Selector("revealToggle:")
+        sideViewDisplay.addTarget(self.revealViewController(), action: Selector("revealToggle:"), forControlEvents: UIControlEvents.TouchUpInside)
         
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
         self.navigationController?.setNavigationBarHidden(false, animated: false)
-        
         calendar.scrollDirection = .Vertical
         calendar.appearance.caseOptions = [.HeaderUsesUpperCase,.WeekdayUsesUpperCase]
         calendar.selectDate(calendar.dateWithYear(2015, month: 10, day: 10))

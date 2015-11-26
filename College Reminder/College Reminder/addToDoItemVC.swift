@@ -9,11 +9,12 @@
 import UIKit
 import Parse
 
-var TODODict = [String: String]()
+
 
 class addToDoItemVC: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet weak var sideViewDisplay: UIBarButtonItem!
+  
+    @IBOutlet weak var sideViewDisplay: UIButton!
     
     @IBOutlet weak var taskField: UITextField!
     
@@ -26,8 +27,7 @@ class addToDoItemVC: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
 
         
-        sideViewDisplay.target = self.revealViewController()
-        sideViewDisplay.action = Selector("revealToggle:")
+        sideViewDisplay.addTarget(self.revealViewController(), action: Selector("revealToggle:"), forControlEvents: UIControlEvents.TouchUpInside)
         
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         

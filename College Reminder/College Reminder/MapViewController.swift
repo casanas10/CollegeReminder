@@ -13,7 +13,8 @@ class MapViewController : UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var classTable: UITableView!
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var openSideView: UIBarButtonItem!
+  
+    @IBOutlet weak var openSideView: UIButton!
     
     var classes = [String]()
     
@@ -26,10 +27,11 @@ class MapViewController : UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func enableSideMenu(){
-        openSideView.target = self.revealViewController()
-        openSideView.action = Selector("revealToggle:")
+        
+        openSideView.addTarget(self.revealViewController(), action: Selector("revealToggle:"), forControlEvents: UIControlEvents.TouchUpInside)
         
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        
         self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
