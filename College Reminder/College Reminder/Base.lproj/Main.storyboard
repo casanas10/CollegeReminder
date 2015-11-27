@@ -853,6 +853,14 @@
                                                 <state key="normal" title="Button" image="menu"/>
                                             </button>
                                         </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="IuC-D4-At0">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wwc-kC-bd1">
+                                                <rect key="frame" x="447" y="7" width="133" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <animations/>
+                                                <state key="normal" title="📓"/>
+                                            </button>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -875,6 +883,7 @@
                     </view>
                     <connections>
                         <outlet property="containerView" destination="C4u-jO-BKa" id="PpA-Eg-L0K"/>
+                        <outlet property="openRightView" destination="wwc-kC-bd1" id="qE3-tm-ZQb"/>
                         <outlet property="openSideView" destination="hAR-kS-aeX" id="Vbh-Uc-BeP"/>
                     </connections>
                 </viewController>
@@ -1133,10 +1142,10 @@
             </objects>
             <point key="canvasLocation" x="958" y="1185"/>
         </scene>
-        <!--Back Table View Controller-->
+        <!--Table View Controller-->
         <scene sceneID="bZ7-pV-kwD">
             <objects>
-                <tableViewController id="sRa-Zu-IV7" customClass="BackTableViewController" customModule="College_Reminder" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="sRa-Zu-IV7" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="AgL-v4-oNi">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1227,12 +1236,12 @@
         <image name="signup" width="366" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ejG-ce-Kk6"/>
-        <segue reference="yQx-JI-65n"/>
-        <segue reference="llD-3L-BFc"/>
-        <segue reference="LQT-QM-hxN"/>
-        <segue reference="ndA-bd-4lj"/>
         <segue reference="axd-yq-8Bw"/>
+        <segue reference="05r-2o-Br6"/>
         <segue reference="HQw-7P-WZL"/>
+        <segue reference="Ke8-1N-FkY"/>
+        <segue reference="yQx-JI-65n"/>
+        <segue reference="VwK-7c-16m"/>
+        <segue reference="ndA-bd-4lj"/>
     </inferredMetricsTieBreakers>
 </document>
