@@ -18,6 +18,13 @@ class MapViewController : UIViewController, UITableViewDelegate, UITableViewData
     
     var classes = [String]()
     
+    struct task {
+        var description: String
+        var day : Int
+        var month: Int
+        var year : Int
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

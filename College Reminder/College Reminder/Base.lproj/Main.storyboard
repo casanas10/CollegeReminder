@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CX7-BR-XRB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CX7-BR-XRB">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -367,11 +367,16 @@
                                                 <state key="normal" title="Button" image="menu"/>
                                             </button>
                                         </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="➖" id="Ue7-LU-JRP">
+                                            <connections>
+                                                <action selector="toggleCalendar:" destination="l1H-bk-wmU" id="9cF-Nw-hdB"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cpa-Oo-FnB" customClass="FSCalendar">
-                                <rect key="frame" x="10" y="64" width="590" height="536"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="384"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -379,13 +384,38 @@
                                     <outlet property="delegate" destination="l1H-bk-wmU" id="fMp-LM-QSF"/>
                                 </connections>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sjA-aj-yXL">
+                                <rect key="frame" x="0.0" y="456" width="600" height="144"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="taskCell" id="pNo-qt-qe0">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pNo-qt-qe0" id="EBV-Ra-uiD">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="l1H-bk-wmU" id="wMa-NE-Vrn"/>
+                                    <outlet property="delegate" destination="l1H-bk-wmU" id="wXd-jA-8TB"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="cpa-Oo-FnB" firstAttribute="bottom" secondItem="pWM-Yh-hXK" secondAttribute="top" id="HGt-h2-LjX"/>
+                            <constraint firstItem="sjA-aj-yXL" firstAttribute="top" secondItem="cpa-Oo-FnB" secondAttribute="bottom" constant="8" symbolic="YES" id="B9V-Kq-yH2"/>
+                            <constraint firstItem="sjA-aj-yXL" firstAttribute="trailing" secondItem="cpa-Oo-FnB" secondAttribute="trailing" id="BG2-sA-Mgd"/>
+                            <constraint firstItem="cpa-Oo-FnB" firstAttribute="bottom" secondItem="pWM-Yh-hXK" secondAttribute="top" constant="-152" id="HGt-h2-LjX"/>
                             <constraint firstAttribute="trailing" secondItem="52f-Oz-nIe" secondAttribute="trailing" id="JZi-WF-uog"/>
-                            <constraint firstItem="cpa-Oo-FnB" firstAttribute="leading" secondItem="ok7-5Q-cb4" secondAttribute="leadingMargin" constant="-10" id="gVf-IR-56u"/>
+                            <constraint firstItem="sjA-aj-yXL" firstAttribute="bottom" secondItem="pWM-Yh-hXK" secondAttribute="top" id="NwM-Df-ufn"/>
+                            <constraint firstItem="sjA-aj-yXL" firstAttribute="leading" secondItem="cpa-Oo-FnB" secondAttribute="leading" id="Xc6-3n-Ozk"/>
+                            <constraint firstItem="cpa-Oo-FnB" firstAttribute="leading" secondItem="ok7-5Q-cb4" secondAttribute="leadingMargin" constant="-20" id="gVf-IR-56u"/>
                             <constraint firstItem="cpa-Oo-FnB" firstAttribute="trailing" secondItem="52f-Oz-nIe" secondAttribute="trailing" id="i7F-q4-7Tz"/>
                             <constraint firstItem="52f-Oz-nIe" firstAttribute="leading" secondItem="ok7-5Q-cb4" secondAttribute="leading" id="lCK-GK-IRb"/>
                             <constraint firstItem="cpa-Oo-FnB" firstAttribute="top" secondItem="52f-Oz-nIe" secondAttribute="bottom" id="w4c-Sp-TdV"/>
@@ -395,6 +425,7 @@
                     <connections>
                         <outlet property="calendar" destination="cpa-Oo-FnB" id="sp3-Ld-T0O"/>
                         <outlet property="sideViewDisplay" destination="KXf-5N-6VW" id="40m-x8-w9k"/>
+                        <outlet property="taskTable" destination="sjA-aj-yXL" id="Iqd-RW-a6X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FfV-nC-lTp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -597,7 +628,7 @@
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
-                                    <segue destination="uqZ-GS-9ff" kind="show" identifier="Note" id="crf-aP-Vdk"/>
+                                    <segue destination="uqZ-GS-9ff" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="dVz-qj-Op9"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -693,7 +724,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kVv-9B-SOw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2509" y="1561"/>
+            <point key="canvasLocation" x="2717" y="1245"/>
         </scene>
         <!--Add Note-->
         <scene sceneID="CT3-pQ-hIY">
@@ -788,7 +819,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eWJ-Qj-kJF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3281" y="1561"/>
+            <point key="canvasLocation" x="3489" y="1245"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="12v-rw-yeV">
@@ -1120,8 +1151,14 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qcK-kr-zlJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vY9-3q-CCG">
+                    <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <animations/>
+                    <state key="normal" title="Button" image="menu"/>
+                </button>
             </objects>
-            <point key="canvasLocation" x="793" y="1561"/>
+            <point key="canvasLocation" x="1001" y="1245"/>
         </scene>
     </scenes>
     <resources>
@@ -1133,11 +1170,11 @@
         <image name="signup" width="366" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="05r-2o-Br6"/>
-        <segue reference="HQw-7P-WZL"/>
-        <segue reference="Ke8-1N-FkY"/>
-        <segue reference="yQx-JI-65n"/>
-        <segue reference="tcG-Mj-tUW"/>
         <segue reference="5BD-Gs-4Ab"/>
+        <segue reference="HQw-7P-WZL"/>
+        <segue reference="llD-3L-BFc"/>
+        <segue reference="05r-2o-Br6"/>
+        <segue reference="axd-yq-8Bw"/>
+        <segue reference="yQx-JI-65n"/>
     </inferredMetricsTieBreakers>
 </document>
