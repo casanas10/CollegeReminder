@@ -7,6 +7,8 @@
 #import "FSCalendar.h"
 #import "NSString+FSExtension.h"
 #import "SWRevealViewController.h"
+#import <Parse/Parse.h> 
+#import <Bolts/BFTask.h>
 
 
 #endif
