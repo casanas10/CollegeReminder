@@ -8,6 +8,7 @@
 
 import Foundation
 import MapKit
+import GoogleMaps
 
 class MapViewController : UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -15,6 +16,9 @@ class MapViewController : UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var mapView: MKMapView!
   
     @IBOutlet weak var openSideView: UIButton!
+    @IBOutlet weak var openRightView: UIButton!
+    
+    @IBOutlet weak var containerView: UIView!
     
     var classes = [String]()
     
@@ -29,13 +33,30 @@ class MapViewController : UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         
         enableSideMenu()
-        setupMap()
-        setupClasses()
+        
+        let camera = GMSCameraPosition.cameraWithLatitude(-33.86,
+            longitude: 151.20, zoom: 6)
+        var mapView = GMSMapView.mapWithFrame(CGRectMake(0, 0, self.view.frame.width, self.view.frame.height), camera: camera)
+        //let mapView = GMSMapView.mapWithFrame(CGRectZero, camera:camera)
+        mapView.myLocationEnabled = true
+        self.containerView.addSubview(mapView)
+        self.view.addSubview(containerView)
+        //self.view.addSubview(mapView)
+        
+        let marker = GMSMarker()
+        marker.position = CLLocationCoordinate2DMake(-33.86, 151.20)
+        marker.title = "Sydney"
+        marker.snippet = "Australia"
+        marker.map = mapView
+        //setupMap()
+        //setupClasses()
     }
     
     func enableSideMenu(){
         
         openSideView.addTarget(self.revealViewController(), action: Selector("revealToggle:"), forControlEvents: UIControlEvents.TouchUpInside)
+        
+        openRightView.addTarget(self.revealViewController(), action: Selector("rightRevealToggle:"), forControlEvents: UIControlEvents.TouchUpInside)
         
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         

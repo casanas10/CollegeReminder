@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38302C05DDA4C9B0941A0FFD /* libPods-College Reminder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E69A8FE03E47673E635FF1B /* libPods-College Reminder.a */; };
 		4C2FE4971BDDA8A40050072A /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2FE4961BDDA8A40050072A /* SWRevealViewController.m */; };
 		4C2FE4991BDDB13F0050072A /* BackTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2FE4981BDDB13F0050072A /* BackTableViewController.swift */; };
 		4C4990631C013DC1003A68CD /* FSCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C49904A1C013DC1003A68CD /* FSCalendar.m */; };
@@ -47,9 +48,9 @@
 		71DBC75E1BB5BA3C001B25ED /* College_ReminderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DBC75D1BB5BA3C001B25ED /* College_ReminderTests.swift */; };
 		71EFE7AB1BE17E1C0048F49A /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71EFE7A91BE17E1C0048F49A /* Bolts.framework */; };
 		71EFE7AC1BE17E1C0048F49A /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71EFE7AA1BE17E1C0048F49A /* Parse.framework */; };
-		E41322D31C027B2C001BA6B5 /* NotesMasterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41322D21C027B2C001BA6B5 /* NotesMasterTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		E41322D51C027B57001BA6B5 /* NotesMasterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41322D41C027B57001BA6B5 /* NotesMasterTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		E41322D71C027B8C001BA6B5 /* AddNoteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41322D61C027B8C001BA6B5 /* AddNoteTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		E41322D31C027B2C001BA6B5 /* NotesMasterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41322D21C027B2C001BA6B5 /* NotesMasterTableViewController.swift */; };
+		E41322D51C027B57001BA6B5 /* NotesMasterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41322D41C027B57001BA6B5 /* NotesMasterTableViewCell.swift */; };
+		E41322D71C027B8C001BA6B5 /* AddNoteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41322D61C027B8C001BA6B5 /* AddNoteTableViewController.swift */; };
 		E4689A921C02931100183BA8 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4689A911C02931100183BA8 /* Social.framework */; };
 		E4689A941C02A23700183BA8 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4689A931C02A23700183BA8 /* ImageIO.framework */; };
 		E4689A961C02A25600183BA8 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4689A951C02A25600183BA8 /* MessageUI.framework */; };
@@ -66,6 +67,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A9B8330669E07C9FDF252FC /* Pods-College Reminder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-College Reminder.release.xcconfig"; path = "Pods/Target Support Files/Pods-College Reminder/Pods-College Reminder.release.xcconfig"; sourceTree = "<group>"; };
 		4C2FE4941BDDA8A40050072A /* College Reminder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "College Reminder-Bridging-Header.h"; sourceTree = "<group>"; };
 		4C2FE4951BDDA8A40050072A /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		4C2FE4961BDDA8A40050072A /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -125,12 +127,14 @@
 		71DBC75D1BB5BA3C001B25ED /* College_ReminderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = College_ReminderTests.swift; sourceTree = "<group>"; };
 		71EFE7A91BE17E1C0048F49A /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		71EFE7AA1BE17E1C0048F49A /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		9E69A8FE03E47673E635FF1B /* libPods-College Reminder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-College Reminder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E41322D21C027B2C001BA6B5 /* NotesMasterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesMasterTableViewController.swift; sourceTree = "<group>"; };
 		E41322D41C027B57001BA6B5 /* NotesMasterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesMasterTableViewCell.swift; sourceTree = "<group>"; };
 		E41322D61C027B8C001BA6B5 /* AddNoteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNoteTableViewController.swift; sourceTree = "<group>"; };
 		E4689A911C02931100183BA8 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		E4689A931C02A23700183BA8 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		E4689A951C02A25600183BA8 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		EFEBC9387E967403428B27FE /* Pods-College Reminder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-College Reminder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-College Reminder/Pods-College Reminder.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +157,7 @@
 				6A91E1731BE14FAA00A7AFBE /* CFNetwork.framework in Frameworks */,
 				71EFE7AC1BE17E1C0048F49A /* Parse.framework in Frameworks */,
 				6A91E1711BE14F9E00A7AFBE /* AudioToolbox.framework in Frameworks */,
+				38302C05DDA4C9B0941A0FFD /* libPods-College Reminder.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +205,15 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		542972D5DEA66132EE71D432 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EFEBC9387E967403428B27FE /* Pods-College Reminder.debug.xcconfig */,
+				0A9B8330669E07C9FDF252FC /* Pods-College Reminder.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		71DBC7391BB5BA3C001B25ED = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +235,8 @@
 				71DBC7441BB5BA3C001B25ED /* College Reminder */,
 				71DBC75A1BB5BA3C001B25ED /* College ReminderTests */,
 				71DBC7431BB5BA3C001B25ED /* Products */,
+				542972D5DEA66132EE71D432 /* Pods */,
+				7934382F51509EC8C2B08AEB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -286,6 +302,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		7934382F51509EC8C2B08AEB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9E69A8FE03E47673E635FF1B /* libPods-College Reminder.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -293,9 +317,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 71DBC7611BB5BA3C001B25ED /* Build configuration list for PBXNativeTarget "College Reminder" */;
 			buildPhases = (
+				972D823DBFF19B5B87176D8B /* Check Pods Manifest.lock */,
 				71DBC73E1BB5BA3C001B25ED /* Sources */,
 				71DBC73F1BB5BA3C001B25ED /* Frameworks */,
 				71DBC7401BB5BA3C001B25ED /* Resources */,
+				4101A679F1003B8114D661BE /* Embed Pods Frameworks */,
+				44C0CED37CED72B006A64FA6 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -382,6 +409,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4101A679F1003B8114D661BE /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-College Reminder/Pods-College Reminder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		44C0CED37CED72B006A64FA6 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-College Reminder/Pods-College Reminder-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		972D823DBFF19B5B87176D8B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		71DBC73E1BB5BA3C001B25ED /* Sources */ = {
@@ -541,6 +616,7 @@
 		};
 		71DBC7621BB5BA3C001B25ED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFEBC9387E967403428B27FE /* Pods-College Reminder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -561,6 +637,7 @@
 		};
 		71DBC7631BB5BA3C001B25ED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A9B8330669E07C9FDF252FC /* Pods-College Reminder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
