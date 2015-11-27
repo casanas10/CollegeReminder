@@ -29,7 +29,7 @@ class addToDoItemVC: UIViewController, UITextFieldDelegate {
         
         sideViewDisplay.addTarget(self.revealViewController(), action: Selector("revealToggle:"), forControlEvents: UIControlEvents.TouchUpInside)
         
-        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        //self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
         self.navigationController?.setNavigationBarHidden(false, animated: false)
         

@@ -820,7 +820,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eWJ-Qj-kJF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2531" y="1149"/>
+            <point key="canvasLocation" x="2526" y="1185"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="12v-rw-yeV">
@@ -1115,7 +1115,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gef-7I-36M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2531" y="367"/>
+            <point key="canvasLocation" x="2531" y="395"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Mlh-ZB-u65">
@@ -1242,6 +1242,6 @@
         <segue reference="Ke8-1N-FkY"/>
         <segue reference="yQx-JI-65n"/>
         <segue reference="VwK-7c-16m"/>
-        <segue reference="ndA-bd-4lj"/>
+        <segue reference="5BD-Gs-4Ab"/>
     </inferredMetricsTieBreakers>
 </document>
