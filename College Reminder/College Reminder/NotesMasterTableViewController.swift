@@ -23,6 +23,8 @@ class NotesMasterTableViewController: UITableViewController {
         
         //allows for white background without showing empty cells if your tableView only has a few items
         let backgroundView = UIView(frame: CGRectZero)
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.cyanColor()]
+        navigationController?.navigationBar.barTintColor = UIColor.orangeColor()
         self.tableView.tableFooterView = backgroundView
         self.tableView.backgroundColor = UIColor.clearColor()
         

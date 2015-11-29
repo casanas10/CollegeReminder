@@ -68,6 +68,7 @@ class CalendarViewController: UIViewController , FSCalendarDataSource, FSCalenda
     
     func getEvents(){
         let query = PFQuery(className: "ToDoTask")
+//        query.whereKey("username", equalTo: <#T##AnyObject#>)
         do {
             eventArray = try query.findObjects()
         } catch {
@@ -122,6 +123,7 @@ class CalendarViewController: UIViewController , FSCalendarDataSource, FSCalenda
     func loadTasks(date: String){
         let query = PFQuery(className: "ToDoTask")
         print("Date: \(date)")
+//        query.whereKey("username", equalTo: AnyObject)
         query.whereKey("date", containsString: date)
         do {
             taskArray = try query.findObjects()
