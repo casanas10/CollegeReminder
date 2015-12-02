@@ -25,7 +25,7 @@ class CalendarViewController: UIViewController , FSCalendarDataSource, FSCalenda
     var allMonths = [Int]()
     var allYears = [Int]()
     var allTimes = [String]()
-    
+    var allDates = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -60,7 +60,7 @@ class CalendarViewController: UIViewController , FSCalendarDataSource, FSCalenda
         let taskInfo:PFObject = taskArray[indexPath.row] as PFObject
         let cell = taskTable.dequeueReusableCellWithIdentifier("taskCell",forIndexPath: indexPath) as UITableViewCell
         
-        cell.textLabel?.text = String("\(taskInfo["taskField"]) due at \(allTimes[indexPath.row])")
+        cell.textLabel?.text = ("\(taskInfo["taskField"]) due at \(allTimes[indexPath.row])")
         return cell
     }
     
@@ -68,6 +68,7 @@ class CalendarViewController: UIViewController , FSCalendarDataSource, FSCalenda
     
     func getEvents(){
         let query = PFQuery(className: "ToDoTask")
+        query.whereKey("username", equalTo: (PFUser.currentUser()?.username)!)
 //        query.whereKey("username", equalTo: <#T##AnyObject#>)
         do {
             eventArray = try query.findObjects()
@@ -77,6 +78,7 @@ class CalendarViewController: UIViewController , FSCalendarDataSource, FSCalenda
         
         for i in 0..<eventArray.count{
             let task:PFObject = eventArray[i] as PFObject
+            print("\(task["date"])")
             var formattedDate = task["date"].componentsSeparatedByString("/")
             var timeDate = formattedDate[2].componentsSeparatedByString(",")
             
@@ -85,13 +87,45 @@ class CalendarViewController: UIViewController , FSCalendarDataSource, FSCalenda
             let year : String = timeDate[0]
             let time : String = timeDate[1]
             
+            var date : String
             
-            print("Year: \(year)")
+            var newmonth : String
+            var newday : String
+            var newyear : String
+            if Int(month) < 10{
+                newmonth = "0" + month
+            } else {
+                newmonth = month
+            }
+            if Int(day) < 10{
+                newday = "0" + day
+            }else{
+                newday = day
+            }
+            newyear = "20" + year
+            
+            date = newyear + "-" + newmonth + "-" + newday
+            
+            print(date)
+            
+            //print("Year: \(year)")
             print("Day: \(day) Month: \(month) Year: \(year)")
             allDays.append(Int(day)!)
             allMonths.append(Int(month)!)
             allYears.append(Int(year)!)
             allTimes.append(time)
+            allDates.append(date)
+            
+            
+//            let dateComponents = NSDateComponents()
+//            let calendar = NSCalendar(identifier: NSCalendarIdentifierGregorian)
+//            dateComponents.setValue(Int(day)!, forComponent: NSCalendarUnit.Day)
+//            dateComponents.setValue(Int(month)!, forComponent: NSCalendarUnit.Month)
+//            dateComponents.setValue(Int(year)!, forComponent: NSCalendarUnit.Year)
+//            let date = calendar?.dateFromComponents(dateComponents)
+//            
+//            print("Date components: \(date)")
+//            allDates.append(date!)
         }
     }
     
@@ -105,7 +139,16 @@ class CalendarViewController: UIViewController , FSCalendarDataSource, FSCalenda
     
     
     func calendar(calendar: FSCalendar!, hasEventForDate date: NSDate!) -> Bool {
-        return allDays.contains(calendar.dayOfDate(date)) && allMonths.contains(calendar.monthOfDate(date)) && allYears.contains(Int(calendar.stringFromDate(date,format:"yy"))!)
+        //for i in 0..<allDays.count{
+         //return
+       // }
+        var newDate = calendar.stringFromDate(calendar.dateWithYear(calendar.yearOfDate(date), month: calendar.monthOfDate(date), day: calendar.dayOfDate(date)),format:"yyyy-MM-dd") as String
+        //print("newdate: " + newDate)
+        //print("\(calendar.dateWithYear(calendar.yearOfDate(date), month: 1, day: 5))")
+        return allDates.contains(newDate)
+        //allDates.contains(String(calendar.dateWithYear(calendar.yearOfDate(date), month: calendar.monthOfDate(date), day: calendar.dayOfDate(date))))
+            //(allDays.contains(calendar.dayOfDate(date)) && allMonths.contains(calendar.monthOfDate(date)) && allYears.contains(Int(calendar.stringFromDate(date,format:"yy"))!))
+        
     }
     
     func calendarCurrentPageDidChange(calendar: FSCalendar!) {
@@ -113,7 +156,18 @@ class CalendarViewController: UIViewController , FSCalendarDataSource, FSCalenda
     }
     
     func calendar(calendar: FSCalendar!, didSelectDate date: NSDate!) {
-        let formattedDate = calendar.stringFromDate(date, format: "MM/dd/yy")
+        var formattedDate : String
+        if (calendar.dayOfDate(date) >= 10){
+            formattedDate = calendar.stringFromDate(date, format: "MM/dd/yy")
+        } else if (calendar.dayOfDate(date) < 10 && calendar.monthOfDate(date) >= 10){
+            formattedDate = calendar.stringFromDate(date,format:"MM/d/yy")
+        } else if (calendar.monthOfDate(date) < 10 && calendar.dayOfDate(date) >= 10){
+            formattedDate = calendar.stringFromDate(date, format: "M/dd/yy")
+        } else {
+            formattedDate = calendar.stringFromDate(date, format: "M/d/yy")
+        }
+        
+        print("\(formattedDate)")
         loadTasks(formattedDate)
         NSLog("calendar did select date \(calendar.stringFromDate(date))")
     }
@@ -122,8 +176,7 @@ class CalendarViewController: UIViewController , FSCalendarDataSource, FSCalenda
     // Should check if event exists before searching, use all Arrays as a check
     func loadTasks(date: String){
         let query = PFQuery(className: "ToDoTask")
-        print("Date: \(date)")
-//        query.whereKey("username", equalTo: AnyObject)
+        query.whereKey("username", equalTo: (PFUser.currentUser()?.username)!)
         query.whereKey("date", containsString: date)
         do {
             taskArray = try query.findObjects()
