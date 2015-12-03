@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		38302C05DDA4C9B0941A0FFD /* libPods-College Reminder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E69A8FE03E47673E635FF1B /* libPods-College Reminder.a */; };
 		4C2FE4971BDDA8A40050072A /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2FE4961BDDA8A40050072A /* SWRevealViewController.m */; };
 		4C2FE4991BDDB13F0050072A /* BackTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2FE4981BDDB13F0050072A /* BackTableViewController.swift */; };
 		4C4990631C013DC1003A68CD /* FSCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C49904A1C013DC1003A68CD /* FSCalendar.m */; };
@@ -40,6 +39,7 @@
 		713869F21BFBD219005A027A /* TimerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713869F11BFBD219005A027A /* TimerVC.swift */; };
 		713869F41BFBD540005A027A /* ToDoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713869F31BFBD540005A027A /* ToDoVC.swift */; };
 		717CF3FE1C00ED39000ABEB0 /* addToDoItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717CF3FD1C00ED39000ABEB0 /* addToDoItemVC.swift */; };
+		7184AE4D1C10FA08003427CE /* addClassesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7184AE4C1C10FA08003427CE /* addClassesVC.swift */; settings = {ASSET_TAGS = (); }; };
 		71DBC7481BB5BA3C001B25ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DBC7471BB5BA3C001B25ED /* AppDelegate.swift */; };
 		71DBC74A1BB5BA3C001B25ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DBC7491BB5BA3C001B25ED /* ViewController.swift */; };
 		71DBC74D1BB5BA3C001B25ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71DBC74B1BB5BA3C001B25ED /* Main.storyboard */; };
@@ -115,6 +115,7 @@
 		713869F11BFBD219005A027A /* TimerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerVC.swift; sourceTree = "<group>"; };
 		713869F31BFBD540005A027A /* ToDoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoVC.swift; sourceTree = "<group>"; };
 		717CF3FD1C00ED39000ABEB0 /* addToDoItemVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addToDoItemVC.swift; sourceTree = "<group>"; };
+		7184AE4C1C10FA08003427CE /* addClassesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addClassesVC.swift; sourceTree = "<group>"; };
 		71DBC7421BB5BA3C001B25ED /* College Reminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "College Reminder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		71DBC7461BB5BA3C001B25ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71DBC7471BB5BA3C001B25ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -127,7 +128,6 @@
 		71DBC75D1BB5BA3C001B25ED /* College_ReminderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = College_ReminderTests.swift; sourceTree = "<group>"; };
 		71EFE7A91BE17E1C0048F49A /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		71EFE7AA1BE17E1C0048F49A /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
-		9E69A8FE03E47673E635FF1B /* libPods-College Reminder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-College Reminder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E41322D21C027B2C001BA6B5 /* NotesMasterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesMasterTableViewController.swift; sourceTree = "<group>"; };
 		E41322D41C027B57001BA6B5 /* NotesMasterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesMasterTableViewCell.swift; sourceTree = "<group>"; };
 		E41322D61C027B8C001BA6B5 /* AddNoteTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNoteTableViewController.swift; sourceTree = "<group>"; };
@@ -157,7 +157,6 @@
 				6A91E1731BE14FAA00A7AFBE /* CFNetwork.framework in Frameworks */,
 				71EFE7AC1BE17E1C0048F49A /* Parse.framework in Frameworks */,
 				6A91E1711BE14F9E00A7AFBE /* AudioToolbox.framework in Frameworks */,
-				38302C05DDA4C9B0941A0FFD /* libPods-College Reminder.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +261,7 @@
 				E41322D61C027B8C001BA6B5 /* AddNoteTableViewController.swift */,
 				713869F31BFBD540005A027A /* ToDoVC.swift */,
 				717CF3FD1C00ED39000ABEB0 /* addToDoItemVC.swift */,
+				7184AE4C1C10FA08003427CE /* addClassesVC.swift */,
 				4C2FE4981BDDB13F0050072A /* BackTableViewController.swift */,
 				4C7203941BDE6C5B00DE1700 /* MapViewController.swift */,
 				71DBC74B1BB5BA3C001B25ED /* Main.storyboard */,
@@ -305,7 +305,6 @@
 		7934382F51509EC8C2B08AEB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9E69A8FE03E47673E635FF1B /* libPods-College Reminder.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -471,6 +470,7 @@
 				4C4990631C013DC1003A68CD /* FSCalendar.m in Sources */,
 				713869F21BFBD219005A027A /* TimerVC.swift in Sources */,
 				71DBC7481BB5BA3C001B25ED /* AppDelegate.swift in Sources */,
+				7184AE4D1C10FA08003427CE /* addClassesVC.swift in Sources */,
 				4C4990651C013DC1003A68CD /* FSCalendarAppearance.m in Sources */,
 				4C7203951BDE6C5B00DE1700 /* MapViewController.swift in Sources */,
 				4C4990691C013DC1003A68CD /* FSCalendarFlowLayout.m in Sources */,

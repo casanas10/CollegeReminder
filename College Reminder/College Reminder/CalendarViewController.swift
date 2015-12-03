@@ -60,7 +60,8 @@ class CalendarViewController: UIViewController , FSCalendarDataSource, FSCalenda
         let taskInfo:PFObject = taskArray[indexPath.row] as PFObject
         let cell = taskTable.dequeueReusableCellWithIdentifier("taskCell",forIndexPath: indexPath) as UITableViewCell
         
-        cell.textLabel?.text = ("\(taskInfo["taskField"]) due at \(allTimes[indexPath.row])")
+        cell.textLabel?.text = String(taskInfo["taskField"]) + " due at \(allTimes[indexPath.row])"
+           
         return cell
     }
     
@@ -78,7 +79,7 @@ class CalendarViewController: UIViewController , FSCalendarDataSource, FSCalenda
         
         for i in 0..<eventArray.count{
             let task:PFObject = eventArray[i] as PFObject
-            print("\(task["date"])")
+            //print("\(task["date"])")
             var formattedDate = task["date"].componentsSeparatedByString("/")
             var timeDate = formattedDate[2].componentsSeparatedByString(",")
             
