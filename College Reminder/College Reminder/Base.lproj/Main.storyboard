@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PcZ-yy-FD6">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PcZ-yy-FD6">
                                 <rect key="frame" x="165" y="144" width="270" height="30"/>
                                 <animations/>
                                 <constraints>
@@ -28,7 +28,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rnV-N4-0Bi">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rnV-N4-0Bi">
                                 <rect key="frame" x="165" y="199" width="270" height="30"/>
                                 <animations/>
                                 <constraints>
@@ -38,7 +38,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfN-GS-T5y">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfN-GS-T5y">
                                 <rect key="frame" x="231" y="319" width="138" height="41"/>
                                 <animations/>
                                 <constraints>
@@ -50,7 +50,7 @@
                                     <action selector="SignUpButtonPressed:" destination="H66-tF-STL" eventType="touchUpInside" id="lt0-ey-dvG"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lfc-jR-957">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lfc-jR-957">
                                 <rect key="frame" x="165" y="254" width="270" height="30"/>
                                 <animations/>
                                 <constraints>
@@ -60,7 +60,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Y4-Oa-n69">
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Y4-Oa-n69">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -76,7 +76,7 @@
                                     <navigationItem title="College Reminder" id="hS8-TS-5NF"/>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AaJ-il-lqV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AaJ-il-lqV">
                                 <rect key="frame" x="241" y="78" width="119" height="39"/>
                                 <animations/>
                                 <constraints>
@@ -87,7 +87,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mjZ-tw-mmj">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mjZ-tw-mmj">
                                 <rect key="frame" x="231" y="385" width="138" height="41"/>
                                 <animations/>
                                 <constraints>
@@ -143,7 +143,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yC5-4X-etz">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yC5-4X-etz">
                                 <rect key="frame" x="165" y="150" width="270" height="30"/>
                                 <animations/>
                                 <constraints>
@@ -153,7 +153,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cNe-Ue-70k">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cNe-Ue-70k">
                                 <rect key="frame" x="165" y="205" width="270" height="30"/>
                                 <animations/>
                                 <constraints>
@@ -163,7 +163,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4B2-lX-ZNj">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4B2-lX-ZNj">
                                 <rect key="frame" x="236" y="336" width="128" height="41"/>
                                 <animations/>
                                 <constraints>
@@ -175,7 +175,7 @@
                                     <segue destination="H66-tF-STL" kind="show" id="Cl8-Qr-KMc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QfZ-52-inA">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QfZ-52-inA">
                                 <rect key="frame" x="236" y="270" width="128" height="41"/>
                                 <animations/>
                                 <constraints>
@@ -187,7 +187,7 @@
                                     <action selector="SignInButtonPressed:" destination="aai-R2-8gj" eventType="touchUpInside" id="fMR-3W-CuI"/>
                                 </connections>
                             </button>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SLy-gl-AT7">
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SLy-gl-AT7">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -203,7 +203,7 @@
                                     <navigationItem title="College Reminder" id="ygZ-De-29e"/>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Back!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qvs-J2-hg7">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome Back!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qvs-J2-hg7">
                                 <rect key="frame" x="214" y="84" width="173" height="39"/>
                                 <animations/>
                                 <constraints>
@@ -396,6 +396,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="GPA" destination="OGz-dE-qfp" id="HcI-yo-5Al"/>
                         <outlet property="Table" destination="HsR-Jp-uaz" id="eZO-wq-OBC"/>
                         <outlet property="openSideView" destination="luL-Le-D7r" id="Vv2-fm-Md2"/>
                         <segue destination="aai-R2-8gj" kind="show" identifier="HomeToLogin" id="yQx-JI-65n"/>
@@ -479,7 +480,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yb-55-9T6">
-                                <rect key="frame" x="266" y="270" width="69" height="30"/>
+                                <rect key="frame" x="266" y="328" width="69" height="30"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="2yP-T8-6hR"/>
@@ -490,6 +491,20 @@
                                     <action selector="addClassButton:" destination="Ywy-UQ-2b1" eventType="touchUpInside" id="ibe-e1-pKt"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter address for class" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oin-B4-vzc">
+                                <rect key="frame" x="176" y="260" width="248" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="248" id="4Fu-AM-s9W"/>
+                                    <constraint firstAttribute="width" constant="248" id="80W-wf-kYH"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="DBr-K1-hk5"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="30" id="UaS-2z-O2C"/>
+                                    <constraint firstAttribute="height" constant="30" id="bqi-31-2aE"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="248" id="h89-kZ-LEp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -499,8 +514,10 @@
                             <constraint firstItem="Rv0-ux-Zmf" firstAttribute="top" secondItem="UUS-gQ-IXt" secondAttribute="bottom" constant="40" id="3uv-OY-Uhl"/>
                             <constraint firstItem="1yb-55-9T6" firstAttribute="centerX" secondItem="sMf-Ik-fjJ" secondAttribute="centerX" id="NIw-sR-QRN"/>
                             <constraint firstItem="otJ-m2-c1Z" firstAttribute="centerX" secondItem="sMf-Ik-fjJ" secondAttribute="centerX" id="SoY-2h-Ly7"/>
+                            <constraint firstItem="1yb-55-9T6" firstAttribute="top" secondItem="oin-B4-vzc" secondAttribute="bottom" constant="38" id="VQf-73-ITF"/>
+                            <constraint firstItem="oin-B4-vzc" firstAttribute="top" secondItem="u1p-EP-meZ" secondAttribute="bottom" constant="25" id="bOn-8I-6jP"/>
                             <constraint firstItem="Rv0-ux-Zmf" firstAttribute="centerX" secondItem="sMf-Ik-fjJ" secondAttribute="centerX" id="fY1-nR-2FY"/>
-                            <constraint firstItem="1yb-55-9T6" firstAttribute="top" secondItem="u1p-EP-meZ" secondAttribute="bottom" constant="35" id="iND-wc-7Zs"/>
+                            <constraint firstItem="oin-B4-vzc" firstAttribute="centerX" secondItem="sMf-Ik-fjJ" secondAttribute="centerX" id="gml-QW-U3a"/>
                             <constraint firstItem="UUS-gQ-IXt" firstAttribute="top" secondItem="IqH-ea-tFb" secondAttribute="bottom" id="nrl-bL-RSa"/>
                             <constraint firstItem="u1p-EP-meZ" firstAttribute="top" secondItem="otJ-m2-c1Z" secondAttribute="bottom" constant="25" id="w5Z-rO-C4v"/>
                             <constraint firstItem="otJ-m2-c1Z" firstAttribute="top" secondItem="Rv0-ux-Zmf" secondAttribute="bottom" constant="25" id="yUA-Lw-WV2"/>
@@ -508,6 +525,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addressClass" destination="oin-B4-vzc" id="dY7-ys-quO"/>
                         <outlet property="classNameField" destination="otJ-m2-c1Z" id="Dcf-tM-YN2"/>
                         <outlet property="currentGradeField" destination="u1p-EP-meZ" id="QL4-Pg-DTA"/>
                         <outlet property="showSideDisplay" destination="MhT-N9-xqY" id="40L-jD-B6V"/>
@@ -747,34 +765,8 @@
                                     <segue destination="ggM-49-Qfa" kind="custom" identifier="Calendar" customClass="SWRevealViewControllerSeguePushController" id="llD-3L-BFc"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Map" id="NV5-9O-dtA">
-                                <rect key="frame" x="0.0" y="72" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NV5-9O-dtA" id="RsG-ZQ-p0W">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <animations/>
-                                </tableViewCellContentView>
-                                <animations/>
-                                <connections>
-                                    <segue destination="4EM-Gr-RU0" kind="custom" identifier="Map" customClass="SWRevealViewControllerSeguePushController" id="LQT-QM-hxN"/>
-                                </connections>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Timer" id="qWo-7w-aDv">
-                                <rect key="frame" x="0.0" y="116" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qWo-7w-aDv" id="got-gy-ON8">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <animations/>
-                                </tableViewCellContentView>
-                                <animations/>
-                                <connections>
-                                    <segue destination="klf-JC-hCV" kind="custom" identifier="Timer" customClass="SWRevealViewControllerSeguePushController" id="k5W-Lc-7kh"/>
-                                </connections>
-                            </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ToDo" id="MgR-Gs-4mb">
-                                <rect key="frame" x="0.0" y="160" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="72" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MgR-Gs-4mb" id="bFC-cJ-xN4">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -787,7 +779,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Calendar" id="PZT-ak-hJe">
-                                <rect key="frame" x="0.0" y="204" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="116" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PZT-ak-hJe" id="8JQ-LK-5Fe">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -800,7 +792,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Note" id="hsa-qA-atV">
-                                <rect key="frame" x="0.0" y="248" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="160" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hsa-qA-atV" id="Vw8-Yh-9fF">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -812,6 +804,32 @@
                                     <segue destination="uqZ-GS-9ff" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="dVz-qj-Op9"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Map" id="NV5-9O-dtA">
+                                <rect key="frame" x="0.0" y="204" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NV5-9O-dtA" id="RsG-ZQ-p0W">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                                <connections>
+                                    <segue destination="4EM-Gr-RU0" kind="custom" identifier="Map" customClass="SWRevealViewControllerSeguePushController" id="LQT-QM-hxN"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Timer" id="qWo-7w-aDv">
+                                <rect key="frame" x="0.0" y="248" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qWo-7w-aDv" id="got-gy-ON8">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                                <connections>
+                                    <segue destination="klf-JC-hCV" kind="custom" identifier="Timer" customClass="SWRevealViewControllerSeguePushController" id="k5W-Lc-7kh"/>
+                                </connections>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="n5V-tL-bWY" id="hcB-JX-rix"/>
@@ -821,7 +839,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nMr-Js-3CU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="958" y="-327"/>
+            <point key="canvasLocation" x="958" y="-413"/>
         </scene>
         <!--Notes-->
         <scene sceneID="Yut-OY-iR3">
@@ -1421,12 +1439,12 @@
         <image name="signup" width="366" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="58W-Ju-gKk"/>
+        <segue reference="ndA-bd-4lj"/>
         <segue reference="ejG-ce-Kk6"/>
         <segue reference="yQx-JI-65n"/>
-        <segue reference="VwK-7c-16m"/>
-        <segue reference="tcG-Mj-tUW"/>
+        <segue reference="fd6-rY-LBA"/>
         <segue reference="HQw-7P-WZL"/>
-        <segue reference="5BD-Gs-4Ab"/>
+        <segue reference="LQT-QM-hxN"/>
+        <segue reference="tcG-Mj-tUW"/>
     </inferredMetricsTieBreakers>
 </document>

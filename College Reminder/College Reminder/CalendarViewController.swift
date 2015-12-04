@@ -70,7 +70,7 @@ class CalendarViewController: UIViewController , FSCalendarDataSource, FSCalenda
     func getEvents(){
         let query = PFQuery(className: "ToDoTask")
         query.whereKey("username", equalTo: (PFUser.currentUser()?.username)!)
-//        query.whereKey("username", equalTo: <#T##AnyObject#>)
+
         do {
             eventArray = try query.findObjects()
         } catch {

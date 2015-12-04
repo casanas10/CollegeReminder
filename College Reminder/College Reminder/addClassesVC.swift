@@ -16,6 +16,9 @@ class addClassesVC: UIViewController {
     
     @IBOutlet weak var currentGradeField: UITextField!
     
+    @IBOutlet weak var addressClass: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -64,7 +67,7 @@ class addClassesVC: UIViewController {
             classAdd["Student"] = PFUser.currentUser()?.username
             classAdd["Course_Name"] = classNameField.text
             classAdd["Grade"] = currentGradeField.text
-            
+            classAdd["Address"] = addressClass.text
             
             classAdd.saveInBackgroundWithBlock {
                 (success: Bool, error:NSError?) -> Void in
