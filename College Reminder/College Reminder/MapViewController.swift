@@ -9,16 +9,31 @@
 import Foundation
 import MapKit
 import GoogleMaps
+import Parse
 
-class MapViewController : UIViewController, UITableViewDelegate, UITableViewDataSource {
+
+var selectedLocation = String()
+var selectedLocationName = String()
+
+class MapViewController : UIViewController{
     
     @IBOutlet weak var classTable: UITableView!
-    @IBOutlet weak var mapView: MKMapView!
+    //@IBOutlet weak var mapView: MKMapView!
   
     @IBOutlet weak var openSideView: UIButton!
     @IBOutlet weak var openRightView: UIButton!
     
-    @IBOutlet weak var containerView: UIView!
+    //@IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var mapView: MKMapView!
+    
+    var annotation:MKAnnotation!
+    var localSearchRequest:MKLocalSearchRequest!
+    var localSearch:MKLocalSearch!
+    var localSearchResponse:MKLocalSearchResponse!
+    var error:NSError!
+    var pointAnnotation:MKPointAnnotation!
+    var pinAnnotationView:MKPinAnnotationView!
+
     
     var classes = [String]()
     
@@ -33,23 +48,26 @@ class MapViewController : UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         
         enableSideMenu()
+        enableCurrentLocation()
+        setupClasses()
         
-        let camera = GMSCameraPosition.cameraWithLatitude(-33.86,
-            longitude: 151.20, zoom: 6)
-        var mapView = GMSMapView.mapWithFrame(CGRectMake(0, 0, self.view.frame.width, self.view.frame.height), camera: camera)
-        //let mapView = GMSMapView.mapWithFrame(CGRectZero, camera:camera)
-        mapView.myLocationEnabled = true
-        self.containerView.addSubview(mapView)
-        self.view.addSubview(containerView)
-        //self.view.addSubview(mapView)
+//        let camera = GMSCameraPosition.cameraWithLatitude(-33.86,
+//            longitude: 151.20, zoom: 6)
+//        var mapView = GMSMapView.mapWithFrame(CGRectMake(0, 0, self.view.frame.width, self.view.frame.height), camera: camera)
+//        //let mapView = GMSMapView.mapWithFrame(CGRectZero, camera:camera)
+//        mapView.myLocationEnabled = true
+//        self.containerView.addSubview(mapView)
+//        self.view.addSubview(containerView)
+//        //self.view.addSubview(mapView)
+//        
+//        let marker = GMSMarker()
+//        marker.position = CLLocationCoordinate2DMake(-33.86, 151.20)
+//        marker.title = "Sydney"
+//        marker.snippet = "Australia"
+//        marker.map = mapView
+//        //setupMap()
+//        //setupClasses()
         
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2DMake(-33.86, 151.20)
-        marker.title = "Sydney"
-        marker.snippet = "Australia"
-        marker.map = mapView
-        //setupMap()
-        //setupClasses()
     }
     
     func enableSideMenu(){
@@ -76,18 +94,64 @@ class MapViewController : UIViewController, UITableViewDelegate, UITableViewData
         mapView.addAnnotation(annotation)
     }
     
-    func setupClasses(){
-        classes = ["Operating Systems", "Software Engineering","iOS Development", "Integrated Product & Process Design"]
-    }
-
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return classes.count
+    func enableCurrentLocation(){
+        if selectedLocation == ""{
+            selectedLocation = "686 Museum Rd, Gainesville, FL 32611"
+            selectedLocationName = "Reitz Union"
+        }
+        localSearchRequest = MKLocalSearchRequest()
+        localSearchRequest.naturalLanguageQuery = selectedLocation
+        localSearch = MKLocalSearch(request: localSearchRequest)
+        localSearch.startWithCompletionHandler { (localSearchResponse, error) -> Void in
+            
+            if localSearchResponse == nil{
+                let alertController = UIAlertController(title: nil, message: "Place Not Found", preferredStyle: UIAlertControllerStyle.Alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alertController, animated: true, completion: nil)
+                return
+            }
+            //3
+            self.pointAnnotation = MKPointAnnotation()
+            self.pointAnnotation.title = selectedLocationName
+            self.pointAnnotation.subtitle = selectedLocation
+            self.pointAnnotation.coordinate = CLLocationCoordinate2D(latitude: localSearchResponse!.boundingRegion.center.latitude, longitude:     localSearchResponse!.boundingRegion.center.longitude)
+            
+            
+            self.pinAnnotationView = MKPinAnnotationView(annotation: self.pointAnnotation, reuseIdentifier: nil)
+            self.mapView.centerCoordinate = self.pointAnnotation.coordinate
+            self.mapView.addAnnotation(self.pinAnnotationView.annotation!)
+            
+            //Setting up the "deltas". This is the difference in lat and long from one side of the view to another. This basically describes how much we want to zoom
+            let latDelta:CLLocationDegrees = 0.01
+            let longDelta:CLLocationDegrees = 0.01
+            
+            //Creating a map region
+            let span:MKCoordinateSpan = MKCoordinateSpanMake(latDelta, longDelta)
+            let location = CLLocationCoordinate2D(latitude: localSearchResponse!.boundingRegion.center.latitude, longitude:     localSearchResponse!.boundingRegion.center.longitude)
+            let region: MKCoordinateRegion = MKCoordinateRegionMake(location, span)
+            
+            //Zoom in on this particular region
+            self.mapView.setRegion(region, animated: true)
+        }
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = classTable.dequeueReusableCellWithIdentifier("cell",forIndexPath: indexPath) as UITableViewCell
+    func setupClasses(){
+        let query = PFQuery(className: "Class")
+        query.whereKey("Student", equalTo: PFUser.currentUser()!.username!)
         
-        cell.textLabel?.text = classes[indexPath.row]
-        return cell
+        do
+        {
+            let classArray = try query.findObjects()
+            
+            userClasses = classArray
+            print(userClasses)
+            
+        }
+        catch
+        {
+            print("There is an error")
+        }
     }
+    
+    
 }

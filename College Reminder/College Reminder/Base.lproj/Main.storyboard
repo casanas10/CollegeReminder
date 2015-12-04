@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CX7-BR-XRB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CX7-BR-XRB">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -1067,25 +1067,25 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C4u-jO-BKa">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="KDf-pC-g3f">
                                 <rect key="frame" x="0.0" y="72" width="600" height="528"/>
                                 <animations/>
-                            </containerView>
+                            </mapView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="C4u-jO-BKa" firstAttribute="leading" secondItem="BUe-Rx-s4V" secondAttribute="leading" id="6wa-Gj-oZ3"/>
+                            <constraint firstItem="KDf-pC-g3f" firstAttribute="top" secondItem="BUe-Rx-s4V" secondAttribute="bottom" id="PxT-gr-aCy"/>
+                            <constraint firstItem="KDf-pC-g3f" firstAttribute="trailing" secondItem="BUe-Rx-s4V" secondAttribute="trailing" id="Rfp-na-4dS"/>
+                            <constraint firstItem="KDf-pC-g3f" firstAttribute="bottom" secondItem="0gP-8U-FNm" secondAttribute="top" id="SRF-1O-Mul"/>
                             <constraint firstItem="BUe-Rx-s4V" firstAttribute="top" secondItem="QRo-o4-0Nc" secondAttribute="bottom" constant="8" id="XDc-u8-POs"/>
-                            <constraint firstItem="C4u-jO-BKa" firstAttribute="trailing" secondItem="BUe-Rx-s4V" secondAttribute="trailing" id="Xb7-C0-EUi"/>
-                            <constraint firstItem="C4u-jO-BKa" firstAttribute="bottom" secondItem="0gP-8U-FNm" secondAttribute="top" id="bTM-YG-aIq"/>
                             <constraint firstAttribute="trailing" secondItem="BUe-Rx-s4V" secondAttribute="trailing" id="c6k-aE-UJC"/>
                             <constraint firstItem="BUe-Rx-s4V" firstAttribute="leading" secondItem="vEA-cf-MUd" secondAttribute="leading" id="gOa-RZ-nh2"/>
-                            <constraint firstItem="C4u-jO-BKa" firstAttribute="top" secondItem="BUe-Rx-s4V" secondAttribute="bottom" id="xJR-nI-vWG"/>
+                            <constraint firstItem="KDf-pC-g3f" firstAttribute="leading" secondItem="BUe-Rx-s4V" secondAttribute="leading" id="red-SR-49m"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="containerView" destination="C4u-jO-BKa" id="PpA-Eg-L0K"/>
+                        <outlet property="mapView" destination="KDf-pC-g3f" id="TeJ-Rp-TvC"/>
                         <outlet property="openRightView" destination="wwc-kC-bd1" id="qE3-tm-ZQb"/>
                         <outlet property="openSideView" destination="hAR-kS-aeX" id="Vbh-Uc-BeP"/>
                     </connections>
@@ -1345,78 +1345,37 @@
             </objects>
             <point key="canvasLocation" x="950" y="1099"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Right View Map Controller-->
         <scene sceneID="bZ7-pV-kwD">
             <objects>
-                <tableViewController id="sRa-Zu-IV7" sceneMemberID="viewController">
+                <tableViewController id="sRa-Zu-IV7" customClass="RightViewMapController" customModule="College_Reminder" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="AgL-v4-oNi">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Home" id="VIa-V6-QWv">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="classCell" textLabel="P43-GA-NqB" style="IBUITableViewCellStyleDefault" id="VIa-V6-QWv">
                                 <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VIa-V6-QWv" id="YvP-iD-2EL">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="P43-GA-NqB">
+                                            <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <animations/>
+                                            <attributedString key="attributedText"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                     <animations/>
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
                                     <segue destination="4EM-Gr-RU0" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="VwK-7c-16m"/>
                                 </connections>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Map" id="UGK-Bj-fPs">
-                                <rect key="frame" x="0.0" y="72" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UGK-Bj-fPs" id="eud-I5-0k8">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <animations/>
-                                </tableViewCellContentView>
-                                <animations/>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Timer" id="wV0-QM-5Gh">
-                                <rect key="frame" x="0.0" y="116" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wV0-QM-5Gh" id="qcU-cJ-znE">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <animations/>
-                                </tableViewCellContentView>
-                                <animations/>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ToDo" id="UZY-yI-1nl">
-                                <rect key="frame" x="0.0" y="160" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UZY-yI-1nl" id="2eT-bK-dDf">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <animations/>
-                                </tableViewCellContentView>
-                                <animations/>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Calendar" id="0z9-aF-YAA">
-                                <rect key="frame" x="0.0" y="204" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0z9-aF-YAA" id="2VP-TO-tJk">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <animations/>
-                                </tableViewCellContentView>
-                                <animations/>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Note" id="qIX-KS-tDC">
-                                <rect key="frame" x="0.0" y="248" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qIX-KS-tDC" id="WZ1-wy-YVt">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <animations/>
-                                </tableViewCellContentView>
-                                <animations/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
