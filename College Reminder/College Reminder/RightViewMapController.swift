@@ -52,6 +52,7 @@ class RightViewMapController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let classSelect: PFObject = userClasses[indexPath.row] as PFObject
         selectedLocation = String(classSelect["Address"])
+        selectedLocationName = String(classSelect["Course_Name"])
         print(selectedLocation)
     }
     

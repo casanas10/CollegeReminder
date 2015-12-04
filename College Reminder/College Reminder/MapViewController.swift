@@ -13,6 +13,7 @@ import Parse
 
 
 var selectedLocation = String()
+var selectedLocationName = String()
 
 class MapViewController : UIViewController{
     
@@ -95,7 +96,8 @@ class MapViewController : UIViewController{
     
     func enableCurrentLocation(){
         if selectedLocation == ""{
-            selectedLocation = "Reitz Union Gainesville FL, 32608"
+            selectedLocation = "686 Museum Rd, Gainesville, FL 32611"
+            selectedLocationName = "Reitz Union"
         }
         localSearchRequest = MKLocalSearchRequest()
         localSearchRequest.naturalLanguageQuery = selectedLocation
@@ -110,7 +112,8 @@ class MapViewController : UIViewController{
             }
             //3
             self.pointAnnotation = MKPointAnnotation()
-            self.pointAnnotation.title = selectedLocation
+            self.pointAnnotation.title = selectedLocationName
+            self.pointAnnotation.subtitle = selectedLocation
             self.pointAnnotation.coordinate = CLLocationCoordinate2D(latitude: localSearchResponse!.boundingRegion.center.latitude, longitude:     localSearchResponse!.boundingRegion.center.longitude)
             
             
