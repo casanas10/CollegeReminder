@@ -18,7 +18,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet weak var Table: UITableView!
     
+    @IBOutlet weak var GPA: UILabel!
+    
+    
+    var sum : Double = 0
+    var average : Double = 0
     var students = [PFObject]()
+    var className = [String]()
+    var grades = [String]()
+    
+    var pointAverage = [Double]()
     
     var varView = Int()
     
@@ -40,27 +49,103 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             }
         }
         
+        getClass()
+        
+        
+    }
+    
+    func getClass(){
+        
+        
+        
         //query users, task, and date
         let query = PFQuery(className: "Class")
         query.whereKey("Student", equalTo: PFUser.currentUser()!.username!)
         
-        do
-        {
-            let userArray = try query.findObjects()
+        do {
+            students = try query.findObjects()
+            for user in students {
+                
+                className.append(String(user["Course_Name"]))
+                grades.append(String(user["Grade"]))
             
-            students = userArray
-            print(students)
+            
+            }
+            
+        }catch {
+            
+            print("Something bad happened")
             
         }
-        catch
-        {
-            print("There is an error")
+        
+        let i :String
+        
+        for i in grades {
+            
+            switch(i) {
+            
+            case "A": pointAverage.append(4)
+                
+                break
+                
+            case "A-": pointAverage.append(3.7)
+                break
+                
+            case "B+": pointAverage.append(3.3)
+                break
+                
+            case "B": pointAverage.append(3.0)
+                break
+            
+            case "B-": pointAverage.append(2.7)
+                break
+                
+            case "C+": pointAverage.append(2.3)
+                break
+                
+            case "C": pointAverage.append(2.0)
+                break
+                
+            case "C-": pointAverage.append(1.7)
+                break
+            
+            case "D+": pointAverage.append(1.3)
+                break
+            
+            case "D": pointAverage.append(1)
+                break
+                
+            case "D-": pointAverage.append(0.7)
+                break
+                
+            case "F" : pointAverage.append(0.0)
+                break
+                
+            default:
+                print("Character not found")
+            }
+            
+            
+        }
+        
+        //print(pointAverage[0])
+        
+       
+        
+        for j in 0..<pointAverage.count {
+           
+           sum += pointAverage[j]
         }
         
         
+        average = (sum / Double(pointAverage.count))
         
+        GPA.text = String (average)
         
     }
+    
+
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -76,19 +161,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return students.count
+        return className.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
-        let taskInfo: PFObject = students[indexPath.row] as PFObject
         
         let cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "cell")
         
         
         
-        cell.textLabel?.text = String(taskInfo["Course_Name"])
-        cell.detailTextLabel?.text = String(taskInfo["Grade"])
+        cell.textLabel?.text = className[indexPath.row]
+        cell.detailTextLabel?.text = grades[indexPath.row]
         
         return cell
         
@@ -103,6 +186,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             
             taskInfo.deleteInBackground()
             students.removeAtIndex(indexPath.row)
+            className.removeAtIndex(indexPath.row)
+            grades.removeAtIndex(indexPath.row)
             
             
             

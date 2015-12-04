@@ -15,7 +15,7 @@ class BackTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        menuArray = ["Home", "Map", "Timer", "ToDo","Calendar", "Note"]
+        menuArray = ["Home", "ToDo", "Calendar","Note","Map", "Timer"]
     }
 
     override func didReceiveMemoryWarning() {
