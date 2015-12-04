@@ -1170,7 +1170,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CKl-cC-gPv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1629" y="431"/>
+            <point key="canvasLocation" x="1780" y="395"/>
         </scene>
         <!--Add To Do ItemVC-->
         <scene sceneID="rW0-Pr-adB">
@@ -1244,17 +1244,6 @@
                                     <action selector="addTaskButton:" destination="le6-Jo-3Ml" eventType="touchUpInside" id="v06-ON-pdv"/>
                                 </connections>
                             </button>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="nZ0-oU-qU3">
-                                <rect key="frame" x="0.0" y="187" width="600" height="216"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="600" id="LVO-Zl-Ftf"/>
-                                    <constraint firstAttribute="height" constant="216" id="M1t-0A-ATa"/>
-                                </constraints>
-                                <date key="date" timeIntervalSinceReferenceDate="470173483.30365002">
-                                    <!--2015-11-25 19:44:43 +0000-->
-                                </date>
-                            </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zg-LM-6n2">
                                 <rect key="frame" x="347" y="149" width="152" height="21"/>
                                 <animations/>
@@ -1266,6 +1255,17 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="nZ0-oU-qU3">
+                                <rect key="frame" x="0.0" y="187" width="600" height="216"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="LVO-Zl-Ftf"/>
+                                    <constraint firstAttribute="height" constant="216" id="M1t-0A-ATa"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="470173483.30365002">
+                                    <!--2015-11-25 19:44:43 +0000-->
+                                </date>
+                            </datePicker>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -1451,7 +1451,7 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellnotes" textLabel="MuU-6a-LoK" detailTextLabel="htl-m9-bPu" rowHeight="68" style="IBUITableViewCellStyleSubtitle" id="gDK-i3-hGz" customClass="NotesMasterTableViewCell" customModule="College_Reminder" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="68"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gDK-i3-hGz" id="DjD-bZ-TFA">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" tableViewCell="gDK-i3-hGz" id="DjD-bZ-TFA">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="67"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -1501,7 +1501,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N3R-i6-hib" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="173" y="514"/>
+            <point key="canvasLocation" x="209" y="718"/>
         </scene>
         <!--Add NotesVC-->
         <scene sceneID="g1u-b1-KEN">
@@ -1515,7 +1515,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qlK-HO-D7M">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vmf-dw-rSS">
+                                <rect key="frame" x="241" y="269" width="119" height="30"/>
+                                <state key="normal" title="Post to Facebook"/>
+                                <connections>
+                                    <action selector="shareToFacebook:" destination="CHR-ZX-og4" eventType="touchUpInside" id="MCt-iz-mkZ"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qlK-HO-D7M">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <color key="barTintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <textAttributes key="titleTextAttributes">
@@ -1532,43 +1539,66 @@
                                                 <state key="normal" title="Button" image="menu"/>
                                             </button>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="buk-mh-phd">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="buk-mh-phd">
                                             <connections>
-                                                <action selector="saveAction:" destination="CHR-ZX-og4" id="q4Z-yN-8Dc"/>
+                                                <segue destination="ujt-0d-R2I" kind="custom" identifier="addNote" customClass="SWRevealViewControllerSeguePushController" id="g0r-rO-mfp"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HNv-Ef-eAq">
-                                <rect key="frame" x="8" y="93" width="584" height="30"/>
-                                <attributedString key="attributedText"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ouc-UG-cgg">
+                                <rect key="frame" x="20" y="87" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Enter text here..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FPR-Y6-HJU">
-                                <rect key="frame" x="8" y="137" width="584" height="124"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter text here..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Miy-Jb-Luf">
+                                <rect key="frame" x="20" y="139" width="560" height="122"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="122" id="3wa-iU-LpZ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vmf-dw-rSS">
-                                <rect key="frame" x="241" y="269" width="119" height="30"/>
-                                <state key="normal" title="Post to Facebook"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6k9-7H-ptL">
+                                <rect key="frame" x="245" y="339" width="110" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="4gi-XJ-rUg"/>
+                                </constraints>
+                                <state key="normal" title="Add Note">
+                                    <color key="titleShadowColor" red="0.14404113299999999" green="0.58903436949999999" blue="0.82217359290000003" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
-                                    <action selector="shareToFacebook:" destination="CHR-ZX-og4" eventType="touchUpInside" id="MCt-iz-mkZ"/>
+                                    <action selector="addNote:" destination="CHR-ZX-og4" eventType="touchUpInside" id="JXm-UY-bS1"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qlK-HO-D7M" firstAttribute="leading" secondItem="Lpb-qq-20t" secondAttribute="leading" id="4Sc-BO-MPQ"/>
+                            <constraint firstItem="Miy-Jb-Luf" firstAttribute="leading" secondItem="Lpb-qq-20t" secondAttribute="leadingMargin" id="4ww-I4-Asb"/>
+                            <constraint firstItem="gcF-Fh-TF1" firstAttribute="top" secondItem="Vmf-dw-rSS" secondAttribute="bottom" constant="301" id="I6j-xR-gDh"/>
+                            <constraint firstItem="Vmf-dw-rSS" firstAttribute="top" secondItem="Miy-Jb-Luf" secondAttribute="bottom" constant="8" symbolic="YES" id="MHL-4k-ShQ"/>
+                            <constraint firstItem="Miy-Jb-Luf" firstAttribute="top" secondItem="ouc-UG-cgg" secondAttribute="bottom" constant="22" id="RN2-Te-aVZ"/>
+                            <constraint firstItem="Vmf-dw-rSS" firstAttribute="centerX" secondItem="Lpb-qq-20t" secondAttribute="centerX" id="VNS-jk-cMh"/>
+                            <constraint firstItem="6k9-7H-ptL" firstAttribute="centerX" secondItem="Vmf-dw-rSS" secondAttribute="centerX" id="aH8-X8-b9E"/>
+                            <constraint firstItem="Vmf-dw-rSS" firstAttribute="centerX" secondItem="qlK-HO-D7M" secondAttribute="centerX" id="bLR-lH-fcP"/>
+                            <constraint firstItem="Miy-Jb-Luf" firstAttribute="trailing" secondItem="ouc-UG-cgg" secondAttribute="trailing" id="ecn-fy-CPf"/>
+                            <constraint firstItem="qlK-HO-D7M" firstAttribute="top" secondItem="UYg-d2-sdp" secondAttribute="bottom" id="hpP-sl-6W8"/>
+                            <constraint firstItem="6k9-7H-ptL" firstAttribute="top" secondItem="Vmf-dw-rSS" secondAttribute="bottom" constant="40" id="i1G-mw-bmy"/>
+                            <constraint firstItem="Miy-Jb-Luf" firstAttribute="leading" secondItem="ouc-UG-cgg" secondAttribute="leading" id="xcr-WC-fSw"/>
+                            <constraint firstItem="Miy-Jb-Luf" firstAttribute="centerX" secondItem="Vmf-dw-rSS" secondAttribute="centerX" id="yt3-6p-NeU"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="sideViewDisplay" destination="fcg-h6-XRX" id="uKo-Yb-s4Y"/>
-                        <outlet property="textView" destination="FPR-Y6-HJU" id="0eg-GX-fEX"/>
-                        <outlet property="titleField" destination="HNv-Ef-eAq" id="t3o-lI-Iwb"/>
+                        <outlet property="textView" destination="Miy-Jb-Luf" id="lP0-Jv-li9"/>
+                        <outlet property="titleField" destination="ouc-UG-cgg" id="zpy-xo-YNf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6n2-7l-Ghu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="862" y="514"/>
+            <point key="canvasLocation" x="1303" y="316"/>
         </scene>
     </scenes>
     <resources>
@@ -1580,12 +1610,13 @@
         <image name="signup" width="366" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="axd-yq-8Bw"/>
         <segue reference="ejG-ce-Kk6"/>
         <segue reference="yQx-JI-65n"/>
         <segue reference="llD-3L-BFc"/>
         <segue reference="HQw-7P-WZL"/>
         <segue reference="ndA-bd-4lj"/>
         <segue reference="LQT-QM-hxN"/>
+        <segue reference="axd-yq-8Bw"/>
+        <segue reference="g0r-rO-mfp"/>
     </inferredMetricsTieBreakers>
 </document>

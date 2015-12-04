@@ -11,6 +11,7 @@ import Parse
 import Bolts
 import Social
 
+
 class NotesMasterTableViewController: UITableViewController {
     
     var textToShare = ""

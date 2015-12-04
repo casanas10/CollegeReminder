@@ -10,9 +10,12 @@ import Parse
 import Bolts
 import Social
 
+
+
 class NotesMasterVC: UIViewController,UITableViewDataSource, UITableViewDelegate {
     
-    
+     var textString = ""
+    var titleString = ""
     @IBOutlet weak var sideViewDisplay: UIButton!
 
     //@IBOutlet weak var sideViewDisplay: UIButton!
@@ -21,10 +24,9 @@ class NotesMasterVC: UIViewController,UITableViewDataSource, UITableViewDelegate
     var textToShare = ""
     var noteObjects : NSMutableArray!  = NSMutableArray()
     
-    
-    override func viewDidLoad() {
+        override func viewDidLoad() {
         super.viewDidLoad()
-        
+        Table.delegate = self
         print("Notes: viewDidLoad")
         
         //allows for white background without showing empty cells if your tableView only has a few items
@@ -124,15 +126,10 @@ class NotesMasterVC: UIViewController,UITableViewDataSource, UITableViewDelegate
         return self.noteObjects.count
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-       
+        
         let cell = tableView.dequeueReusableCellWithIdentifier("cellnotes", forIndexPath: indexPath) as! NotesMasterTableViewCell
-
+        
         var object: PFObject = self.noteObjects.objectAtIndex(indexPath.row) as! PFObject
         // Configure the cell...
         
@@ -142,6 +139,14 @@ class NotesMasterVC: UIViewController,UITableViewDataSource, UITableViewDelegate
         return cell
         
     }
+
+    
+      
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
+    
     
     
     func tableView(tableView: UITableView?, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -163,6 +168,16 @@ class NotesMasterVC: UIViewController,UITableViewDataSource, UITableViewDelegate
         }
     }
 
+    /*
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier != "editNote") {
+            print("hello " + titleString)
+            let controller = segue.destinationViewController as! addNotesVC
+            controller.secondText = textString as! String
+            controller.secondTitle = titleString as! String
+                    }
+    }
+*/
 
     
 

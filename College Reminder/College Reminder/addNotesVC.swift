@@ -14,26 +14,25 @@ import Foundation
 
 
 class addNotesVC: UIViewController {
-
+    var secondTitle: String!
+    var secondText: String!
     @IBOutlet weak var sideViewDisplay: UIButton!
+    
     @IBOutlet weak var titleField: UITextField!
     @IBOutlet weak var textView: UITextView!
+    //@IBOutlet weak var titleField: UITextField!
+    //@IBOutlet weak var textView: UITextView!
      var object: PFObject!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        titleField.text = secondTitle
+        textView.text = secondText
         sideViewDisplay.addTarget(self.revealViewController(), action: Selector("revealToggle:"), forControlEvents: UIControlEvents.TouchUpInside)
         
         self.navigationController?.setNavigationBarHidden(false, animated: false)
-        if(self.object != nil){
-            self.titleField?.text = self.object["title"] as? String
-            self.textView?.text = self.object["text"] as? String
-            
-        }else{
-            self.object = PFObject(className: "Notes")
-        }
-
-        // Do any additional setup after loading the view.
+        
+      
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,6 +40,7 @@ class addNotesVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    /*
     
     @IBAction func saveAction(sender: AnyObject) {
         self.object["username"] = PFUser.currentUser()?.username
@@ -55,17 +55,97 @@ class addNotesVC: UIViewController {
                 print(error!.userInfo)
             }
         }
+
+         
         
+    
     }
+*/
     
     
-        
     @IBAction func shareToFacebook(sender: UIButton) {
         var shareToFacebook: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
         self.presentViewController(shareToFacebook, animated: true, completion: nil)
         shareToFacebook.setInitialText(self.textView?.text)
         
         
+    }
+    
+    @IBAction func addNote(sender: UIButton) {
+        if textView.text == "" {
+            
+            let uiAlert = UIAlertController(title: "Error", message: "Please enter a task", preferredStyle: UIAlertControllerStyle.Alert)
+            self.presentViewController(uiAlert, animated: true, completion: nil)
+            
+            
+            uiAlert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { action in
+                
+            }))
+            
+        } else {
+            
+            print("test")
+            let note_ = PFObject(className: "Notes")
+            
+            note_["username"] = PFUser.currentUser()?.username
+            note_["title"] = titleField!.text
+            note_["text"] = textView!.text
+            
+            
+            note_.saveInBackgroundWithBlock {
+                (success: Bool, error:NSError?) -> Void in
+                
+                if(success)
+                {
+                    //We saved our information
+                    //print("Saved")
+                    
+                    
+                    
+                    
+                    
+                    note_.saveInBackgroundWithBlock {
+                        (success: Bool, error:NSError?) -> Void in
+                        
+                        if(success)
+                        {
+                            //We saved our information
+                            print("Success")
+                            print("Task added")
+                            
+                            
+                            
+                            
+                        }
+                        else
+                        {
+                            //there was a problem
+                            print("Error saving task")
+                        }
+                        
+                    }
+                    
+                }
+                else
+                {
+                    //there was a problem
+                    print("Error saving task")
+                }
+                
+                
+            }
+            
+            
+        }
+
+    }
+    
+    
+   
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?)
+    {
+        self.view.endEditing(true)
     }
 
 
