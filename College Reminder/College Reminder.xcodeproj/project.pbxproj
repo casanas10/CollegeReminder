@@ -24,6 +24,7 @@
 		4C49906F1C013DC1003A68CD /* UIView+FSExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4990621C013DC1003A68CD /* UIView+FSExtension.m */; };
 		4C4990721C014176003A68CD /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4990711C014176003A68CD /* CalendarViewController.swift */; };
 		4C7203951BDE6C5B00DE1700 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7203941BDE6C5B00DE1700 /* MapViewController.swift */; };
+		4C97067C1C1110AA003D62D6 /* RightViewMapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C97067B1C1110AA003D62D6 /* RightViewMapController.swift */; };
 		6A91E16B1BE14B4A00A7AFBE /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A91E16A1BE14B4A00A7AFBE /* SignUpVC.swift */; };
 		6A91E1711BE14F9E00A7AFBE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A91E1701BE14F9E00A7AFBE /* AudioToolbox.framework */; };
 		6A91E1731BE14FAA00A7AFBE /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A91E1721BE14FAA00A7AFBE /* CFNetwork.framework */; };
@@ -39,7 +40,7 @@
 		713869F21BFBD219005A027A /* TimerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713869F11BFBD219005A027A /* TimerVC.swift */; };
 		713869F41BFBD540005A027A /* ToDoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713869F31BFBD540005A027A /* ToDoVC.swift */; };
 		717CF3FE1C00ED39000ABEB0 /* addToDoItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717CF3FD1C00ED39000ABEB0 /* addToDoItemVC.swift */; };
-		7184AE4D1C10FA08003427CE /* addClassesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7184AE4C1C10FA08003427CE /* addClassesVC.swift */; settings = {ASSET_TAGS = (); }; };
+		7184AE4D1C10FA08003427CE /* addClassesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7184AE4C1C10FA08003427CE /* addClassesVC.swift */; };
 		71DBC7481BB5BA3C001B25ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DBC7471BB5BA3C001B25ED /* AppDelegate.swift */; };
 		71DBC74A1BB5BA3C001B25ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DBC7491BB5BA3C001B25ED /* ViewController.swift */; };
 		71DBC74D1BB5BA3C001B25ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71DBC74B1BB5BA3C001B25ED /* Main.storyboard */; };
@@ -100,6 +101,7 @@
 		4C4990621C013DC1003A68CD /* UIView+FSExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FSExtension.m"; sourceTree = "<group>"; };
 		4C4990711C014176003A68CD /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		4C7203941BDE6C5B00DE1700 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		4C97067B1C1110AA003D62D6 /* RightViewMapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightViewMapController.swift; sourceTree = "<group>"; };
 		6A91E16A1BE14B4A00A7AFBE /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		6A91E1701BE14F9E00A7AFBE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		6A91E1721BE14FAA00A7AFBE /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -262,6 +264,7 @@
 				713869F31BFBD540005A027A /* ToDoVC.swift */,
 				717CF3FD1C00ED39000ABEB0 /* addToDoItemVC.swift */,
 				7184AE4C1C10FA08003427CE /* addClassesVC.swift */,
+				4C97067B1C1110AA003D62D6 /* RightViewMapController.swift */,
 				4C2FE4981BDDB13F0050072A /* BackTableViewController.swift */,
 				4C7203941BDE6C5B00DE1700 /* MapViewController.swift */,
 				71DBC74B1BB5BA3C001B25ED /* Main.storyboard */,
@@ -476,6 +479,7 @@
 				4C4990691C013DC1003A68CD /* FSCalendarFlowLayout.m in Sources */,
 				E41322D31C027B2C001BA6B5 /* NotesMasterTableViewController.swift in Sources */,
 				4C4990671C013DC1003A68CD /* FSCalendarCollectionView.m in Sources */,
+				4C97067C1C1110AA003D62D6 /* RightViewMapController.swift in Sources */,
 				4C49906F1C013DC1003A68CD /* UIView+FSExtension.m in Sources */,
 				717CF3FE1C00ED39000ABEB0 /* addToDoItemVC.swift in Sources */,
 				4C4990661C013DC1003A68CD /* FSCalendarCell.m in Sources */,
