@@ -110,7 +110,6 @@ class MapViewController : UIViewController{
                 self.presentViewController(alertController, animated: true, completion: nil)
                 return
             }
-            //3
             self.pointAnnotation = MKPointAnnotation()
             self.pointAnnotation.title = selectedLocationName
             self.pointAnnotation.subtitle = selectedLocation
