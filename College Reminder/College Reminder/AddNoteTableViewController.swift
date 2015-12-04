@@ -15,6 +15,7 @@ import Foundation
 public extension String {
     var NS: NSString { return (self as NSString) }
 }
+
 class AddNoteTableViewController: UITableViewController {
     
     //@IBOutlet weak var titleField: UITextField!
@@ -31,6 +32,7 @@ class AddNoteTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         if(self.object != nil){
             self.titleField?.text = self.object["title"] as? String
             self.textView?.text = self.object["text"] as? String

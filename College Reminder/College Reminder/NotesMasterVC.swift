@@ -2,7 +2,6 @@
 //  NotesMasterTableViewController.swift
 //  College Reminder
 //
-//  Created by Anthony Colas on 11/21/15.
 //  Copyright © 2015 alejandro casanas. All rights reserved.
 //
 
@@ -11,10 +10,17 @@ import Parse
 import Bolts
 import Social
 
-class NotesMasterTableViewController: UITableViewController {
+class NotesMasterVC: UIViewController,UITableViewDataSource, UITableViewDelegate {
+    
+    
+    @IBOutlet weak var sideViewDisplay: UIButton!
+
+    //@IBOutlet weak var sideViewDisplay: UIButton!
+    @IBOutlet weak var Table: UITableView!
     
     var textToShare = ""
     var noteObjects : NSMutableArray!  = NSMutableArray()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,22 +28,13 @@ class NotesMasterTableViewController: UITableViewController {
         print("Notes: viewDidLoad")
         
         //allows for white background without showing empty cells if your tableView only has a few items
-        let backgroundView = UIView(frame: CGRectZero)
-        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.cyanColor()]
-        navigationController?.navigationBar.barTintColor = UIColor.orangeColor()
-        self.tableView.tableFooterView = backgroundView
-        self.tableView.backgroundColor = UIColor.clearColor()
-        
-        // self.fetchedFromServer = false
-        
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+                
+        sideViewDisplay.addTarget(self.revealViewController(), action: Selector("revealToggle:"), forControlEvents: UIControlEvents.TouchUpInside)
+
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+
+        // Do any additional setup after loading the view.
     }
-    
     
     
     override func viewDidAppear(animated: Bool) {
@@ -47,24 +44,22 @@ class NotesMasterTableViewController: UITableViewController {
         if (PFUser.currentUser() != nil) {
             fetchAllObjectsFromLocalDatastore()
             fetchAllObjects()
-            
-            
-            
         }
     }
-    
-    
+
+  
+
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
         // Creates full-width tableViewCell separators. This is required for unpopulated cells.
-        if self.tableView.respondsToSelector("setSeparatorInset:") {
-            self.tableView.separatorInset = UIEdgeInsetsZero
+        if Table.respondsToSelector("setSeparatorInset:") {
+            self.Table.separatorInset = UIEdgeInsetsZero
             
         }
         
-        if self.tableView.respondsToSelector("setLayoutMargins:") {
-            self.tableView.layoutMargins = UIEdgeInsetsZero
+        if Table.respondsToSelector("setLayoutMargins:") {
+            self.Table.layoutMargins = UIEdgeInsetsZero
         }
     }
     
@@ -82,7 +77,8 @@ class NotesMasterTableViewController: UITableViewController {
                 
                 self.noteObjects = temp.mutableCopy() as! NSMutableArray
                 
-                self.tableView.reloadData()
+                self.Table.reloadData()
+                
             }else{
                 print(error!.userInfo)
             }
@@ -116,28 +112,27 @@ class NotesMasterTableViewController: UITableViewController {
         
         
     }
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK: - Table view data source
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.noteObjects.count
+    }
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        
-        return self.noteObjects.count
-    }
-    
-    
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCellWithIdentifier("cellnotes", forIndexPath: indexPath) as! NotesMasterTableViewCell
-        
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+       
+        let cell = tableView.dequeueReusableCellWithIdentifier("cellnotes", forIndexPath: indexPath) as! NotesMasterTableViewCell
+
         var object: PFObject = self.noteObjects.objectAtIndex(indexPath.row) as! PFObject
         // Configure the cell...
         
@@ -145,13 +140,15 @@ class NotesMasterTableViewController: UITableViewController {
         cell.masterTextLabel?.text = object["text"] as? String
         
         return cell
+        
     }
     
-    override func tableView(tableView: UITableView?, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+    
+    func tableView(tableView: UITableView?, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return true
     }
     
-    override func tableView(tableView: UITableView?, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(tableView: UITableView?, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         
         if (editingStyle == UITableViewCellEditingStyle.Delete) {
             
@@ -165,25 +162,9 @@ class NotesMasterTableViewController: UITableViewController {
             })
         }
     }
+
+
     
-    
-    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        self.performSegueWithIdentifier("editNote", sender: self)
-    }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "editNote") {
-            let indexPath = self.tableView.indexPathForSelectedRow!
-            let object:PFObject = self.noteObjects.objectAtIndex(indexPath.row) as! PFObject
-            let upcoming:AddNoteTableViewController = segue.destinationViewController as! AddNoteTableViewController
-            upcoming.object = object
-            self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
-        }
-    }
-    
-    
-    
-    
-    
-    
+
+   
 }

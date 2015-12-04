@@ -8,7 +8,7 @@
 
 import UIKit
 import Parse
-
+import EventKit
 
 
 class addToDoItemVC: UIViewController, UITextFieldDelegate {
@@ -22,7 +22,7 @@ class addToDoItemVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var dateLabel: UILabel!
     
     @IBOutlet weak var datePicker: UIDatePicker!
-    
+    var appDelegate: AppDelegate?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -132,11 +132,55 @@ class addToDoItemVC: UIViewController, UITextFieldDelegate {
             
         }
         
+        appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate
+        if appDelegate!.eventStore == nil {
+            appDelegate!.eventStore = EKEventStore()
+            appDelegate!.eventStore!.requestAccessToEntityType(
+                EKEntityType.Reminder, completion: {(granted, error) in
+                    if !granted {
+                        print("Access to store not granted")
+                        print(error!.localizedDescription)
+                    } else {
+                        print("Access granted")
+                    }
+            })
+        }
+        
+        if (appDelegate!.eventStore != nil) {
+            self.createReminder()
+        }
+    
         
     
     }
     
     
+    func createReminder() {
+        
+        let reminder = EKReminder(eventStore: appDelegate!.eventStore!)
+        
+        reminder.title = taskField.text!
+        reminder.calendar =
+            appDelegate!.eventStore!.defaultCalendarForNewReminders()
+        let date = datePicker.date
+        let alarm = EKAlarm(absoluteDate: date)
+        
+        reminder.addAlarm(alarm)
+        
+        var error: NSError?
+        
+        
+        do{
+       try appDelegate!.eventStore!.saveReminder(reminder, commit: true)
+        } catch {
+            print(error)
+        }
+        
+        if error != nil {
+            print("Reminder failed with error \(error?.localizedDescription)")
+        }
+    }
+
     //hit return
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         
