@@ -138,6 +138,7 @@ class MapViewController : UIViewController{
     func setupClasses(){
         let query = PFQuery(className: "Class")
         query.whereKey("Student", equalTo: PFUser.currentUser()!.username!)
+        query.whereKey("Address", notEqualTo: "")
         
         do
         {

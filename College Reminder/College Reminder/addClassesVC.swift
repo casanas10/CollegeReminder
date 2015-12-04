@@ -92,6 +92,7 @@ class addClassesVC: UIViewController {
                             
                             self.currentGradeField.text = ""
                             self.classNameField.text = ""
+                            self.addressClass.text = ""
                             //self.dateLabel.text = ""
                             
                             
