@@ -10,8 +10,12 @@ import UIKit
 
 class NotesMasterTableViewCell: UITableViewCell {
     
-   // @IBOutlet weak var masterTitleLabel: UILabel!
-   // @IBOutlet weak var masterTextLabel: UILabel!
+    // @IBOutlet weak var masterTitleLabel: UILabel!
+    // @IBOutlet weak var masterTextLabel: UILabel!
+    
+    
+    //@IBOutlet weak var masterTitleLabel: UILabel!
+    //@IBOutlet weak var masterTextLabel: UILabel!
     
     
     @IBOutlet weak var masterTitleLabel: UILabel!

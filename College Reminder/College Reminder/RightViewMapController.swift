@@ -45,7 +45,7 @@ class RightViewMapController: UITableViewController {
         
         cell.textLabel?.text = String(classInfo["Course_Name"])
         cell.textLabel?.textAlignment = .Right
-        print("\(classInfo["Course_Name"])")
+        //print("\(classInfo["Course_Name"])")
         return cell
     }
     

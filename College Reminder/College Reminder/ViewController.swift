@@ -56,8 +56,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func getClass(){
         
-        
-        
+    
+        if let user = PFUser.currentUser(){
         //query users, task, and date
         let query = PFQuery(className: "Class")
         query.whereKey("Student", equalTo: PFUser.currentUser()!.username!)
@@ -124,7 +124,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             default:
                 print("Character not found")
             }
-            
+            }
             
         }
         

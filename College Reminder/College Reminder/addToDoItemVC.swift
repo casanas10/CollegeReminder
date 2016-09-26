@@ -8,24 +8,24 @@
 
 import UIKit
 import Parse
-
+import EventKit
 
 
 class addToDoItemVC: UIViewController, UITextFieldDelegate {
-
-  
+    
+    
     @IBOutlet weak var sideViewDisplay: UIButton!
     
     @IBOutlet weak var taskField: UITextField!
     
-
+    
     @IBOutlet weak var dateLabel: UILabel!
     
     @IBOutlet weak var datePicker: UIDatePicker!
-    
+    var appDelegate: AppDelegate?
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         
         sideViewDisplay.addTarget(self.revealViewController(), action: Selector("revealToggle:"), forControlEvents: UIControlEvents.TouchUpInside)
         
@@ -36,11 +36,11 @@ class addToDoItemVC: UIViewController, UITextFieldDelegate {
         dateLabel.text = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: NSDateFormatterStyle.ShortStyle, timeStyle: NSDateFormatterStyle.ShortStyle)
         
         datePicker.addTarget(self, action: Selector("dateChanged:"), forControlEvents: UIControlEvents.ValueChanged)
-
+        
         
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -59,7 +59,7 @@ class addToDoItemVC: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func addTaskButton(sender: AnyObject) {
-    
+        
         if taskField.text == "" {
             
             let uiAlert = UIAlertController(title: "Error", message: "Please enter a task", preferredStyle: UIAlertControllerStyle.Alert)
@@ -108,7 +108,7 @@ class addToDoItemVC: UIViewController, UITextFieldDelegate {
                             
                             self.taskField.text = ""
                             //self.dateLabel.text = ""
-
+                            
                             
                         }
                         else
@@ -132,10 +132,68 @@ class addToDoItemVC: UIViewController, UITextFieldDelegate {
             
         }
         
+        appDelegate = UIApplication.sharedApplication().delegate as? AppDelegate
+        if appDelegate!.eventStore == nil {
+            appDelegate!.eventStore = EKEventStore()
+            appDelegate!.eventStore!.requestAccessToEntityType(
+                EKEntityType.Reminder, completion: {(granted, error) in
+                    if !granted {
+                         NSOperationQueue.mainQueue().addOperationWithBlock {
+                        let uiAlert = UIAlertController(title: "Warning", message: "Task will be added to list, but please grant permission in settings to add to your device's reminders", preferredStyle: UIAlertControllerStyle.Alert)
+                        self.presentViewController(uiAlert, animated: true, completion: nil)
+                        
+                        
+                        uiAlert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { action in
+                            
+                        }))
+                        }
+                        print("Access to store not granted")
+                        
+                        
+
+                        
+
+                        //   print(error!.localizedDescription)
+                    } else {
+                        print("Access granted")
+                    }
+            })
+        }
         
-    
+        if (appDelegate!.eventStore != nil) {
+            self.createReminder()
+        }
+        
+        
+        
     }
     
+    
+    func createReminder() {
+        
+        let reminder = EKReminder(eventStore: appDelegate!.eventStore!)
+        
+        reminder.title = taskField.text!
+        reminder.calendar =
+            appDelegate!.eventStore!.defaultCalendarForNewReminders()
+        let date = datePicker.date
+        let alarm = EKAlarm(absoluteDate: date)
+        
+        reminder.addAlarm(alarm)
+        
+        var error: NSError?
+        
+        
+        do{
+            try appDelegate!.eventStore!.saveReminder(reminder, commit: true)
+        } catch {
+            print(error)
+        }
+        
+        if error != nil {
+            print("Reminder failed with error \(error?.localizedDescription)")
+        }
+    }
     
     //hit return
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -150,16 +208,16 @@ class addToDoItemVC: UIViewController, UITextFieldDelegate {
     {
         self.view.endEditing(true)
     }
-
-
+    
+    
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }
